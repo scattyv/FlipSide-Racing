@@ -1,0 +1,103 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2.6. Email Settings</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot_9469"><link rel="home" href="index.html" title="Flip Side Racing Software"><link rel="up" href="ch02.html" title="Chapter 2. General Config Screen"><link rel="prev" href="ch02s05.html" title="2.5. Database Utilities"><link rel="next" href="ch03.html" title="Chapter 3. Edit Racers Screen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.6. Email Settings</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02s05.html">Prev</a> </td><th width="60%" align="center">Chapter 2. General Config Screen</th><td width="20%" align="right"> <a accesskey="n" href="ch03.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="EmailSettings"></a>2.6. Email Settings</h2></div></div></div>
+      
+
+      <p>Using the settings in this section will allow the software to
+      automatically send out race reports to admins and/or racers after a race
+      has been completed. For racers to receive email you must define an email
+      address for that racer on the <a class="link" href="ch03.html" title="Chapter 3. Edit Racers Screen">Edit
+      Racers</a> screen.</p>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp153264"></a>2.6.1. Server Name</h3></div></div></div>
+        
+
+        <p>This must be set to the SMTP server name for your email
+        provider. For example if you are using Gmail this setting must be set
+        to smtp.gmail.com</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp154576"></a>2.6.2. Server Port</h3></div></div></div>
+        
+
+        <p>This is the port number for your SMTP server, it is set to 25 by
+        default. If your email provider does not indicate a port number and is
+        not using encryption then this is a safe default. If you are using
+        encryption then the port number is most likely 587 or 465. For example
+        in the case of Gmail they are using encryption and have the port
+        number set to 587. Your email provider should indicate what port
+        number to use.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp156208"></a>2.6.3. From Address</h3></div></div></div>
+        
+
+        <p>You must set this field to your email address. This is the
+        address that the email's will appear to come from. If you do not set
+        it to the address for your account your email provider may reject the
+        email as spam.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp157712"></a>2.6.4. Admin Addresses</h3></div></div></div>
+        
+
+        <p>Enter a comma separated list of email addresses into this field.
+        If you define the recipients to include admins the listed admin email
+        addresses will get a copy of each race report sent whether they are in
+        the race or not.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp159120"></a>2.6.5. Username</h3></div></div></div>
+        
+
+        <p>Set this setting to the username of your email account.
+        Depending on your email provider this may be a normal username or it
+        may be your from email address. For example in the case of Gmail this
+        is your from email address.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp160528"></a>2.6.6. Password</h3></div></div></div>
+        
+
+        <p>Set this to the password for your email account. To protect your
+        password it is not displayed on the screen, only dots will
+        appear.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp161936"></a>2.6.7. Recipients</h3></div></div></div>
+        
+
+        <p>Recipients defines who will receive race reports. This can be
+        set to Admins, Racers or Admins and Racers. If set to include Racers
+        you must set the email addresses for each racer that wants to receive
+        the reports. You do this by editing the racers information on the
+        <a class="link" href="ch03.html" title="Chapter 3. Edit Racers Screen">Edit Racers</a> screen.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp163984"></a>2.6.8. Race Reports</h3></div></div></div>
+        
+
+        <p>This setting defines which type or races will send a report. By
+        default the software will only send out reports for Mains. You can
+        change this to send out reports for all races, or to send out reports
+        for all races but practices. Race reports are sent immediately after
+        the race is completed.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp165520"></a>2.6.9. SSL Encryption</h3></div></div></div>
+        
+
+        <p>Enable SSL Encryption if your email provider allows this option.
+        If your email server supports this make sure to set the server port to
+        the correct number. For example Gmail requires the use of port 587
+        with SSL Encryption.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp166928"></a>2.6.10. Test Button</h3></div></div></div>
+        
+
+        <p>After you have defined the necessary email settings you can test
+        the email functionality using the test button. This will send a basic
+        email message to the defined from address. If you do not receive this
+        test message then either check your junk mail folder or verify your
+        email settings.</p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch02s05.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch02.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">2.5. Database Utilities </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 3. Edit Racers Screen</td></tr></table></div></body></html>

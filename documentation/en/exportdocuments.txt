@@ -1,0 +1,9 @@
+The following command was used to generate the single html document
+xsltproc --output flipsideracingsoftware.html --stringparam section.autolabel 1 --stringparam section.label.includes.component.label 1 ~/Downloads/docbook-xsl-1.76.1/html/docbook.xsl flipsideracingsoftware.xml
+
+The following command was used to generate the html chunks
+xsltproc --output index.hml --stringparam section.autolabel 1 --stringparam section.label.includes.component.label 1 ~/Downloads/docbook-xsl-1.76.1/html/chunk.xsl ../flipsideracingsoftware.xml
+
+The following commands were used to generate the pdf
+xsltproc --output flipsideracingsoftware.fo --stringparam section.autolabel 1 --stringparam section.label.includes.component.label 1 ~/Downloads/docbook-xsl-1.76.1/fo/fo-docbook.xsl flipsideracingsoftware.xml
+sh ~/Downloads/fop-1.0/fop -fo flipsideracingsoftware.fo -pdf flipsideracingsoftware.pdf 

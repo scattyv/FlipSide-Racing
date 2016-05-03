@@ -1,0 +1,303 @@
+<project>
+    <shortName>FlipSideRacing</shortName>
+    <fullName>Flip Side Racing Software</fullName>
+    <version>13.01</version>
+    <installerFilename>${product_shortname}-${platform_name}-installer.${platform_exec_suffix}</installerFilename>
+    <splashImage>${programroot}/club_logo/FlipSideRacingLogo.png</splashImage>
+    <componentList>
+        <component>
+            <name>Desktop</name>
+            <description>Desktop Shortcuts</description>
+            <canBeEdited>1</canBeEdited>
+            <detailedDescription>Add a FlipSide Racing shortcut to the desktop.</detailedDescription>
+            <selected>1</selected>
+            <show>1</show>
+            <desktopShortcutList>
+                <shortcut>
+                    <comment>FlipSide Racing</comment>
+                    <exec>${installdir}/fsracewin.exe</exec>
+                    <icon></icon>
+                    <name>FSRaceWin</name>
+                    <path>${installdir}</path>
+                    <platforms>all</platforms>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/fsracewin.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon></windowsIcon>
+                    <windowsPath>${installdir}</windowsPath>
+                </shortcut>
+            </desktopShortcutList>
+        </component>
+        <component>
+            <name>start</name>
+            <description>Start Menu Shortcuts</description>
+            <canBeEdited>1</canBeEdited>
+            <detailedDescription>Add shortcuts to Start Menu</detailedDescription>
+            <selected>1</selected>
+            <show>1</show>
+            <folderList>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfiles</name>
+                    <platforms>all</platforms>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfileslinux</name>
+                    <platforms>linux</platforms>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfileswindows</name>
+                    <platforms>windows</platforms>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfilesosx</name>
+                    <platforms>osx</platforms>
+                </folder>
+            </folderList>
+            <startMenuShortcutList>
+                <startMenuShortcut>
+                    <comment>Uninstall ${product_fullname}</comment>
+                    <name>Uninstall ${product_fullname}</name>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/${uninstallerName}.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon></windowsIcon>
+                    <windowsPath>${installdir}/</windowsPath>
+                </startMenuShortcut>
+                <startMenuShortcut>
+                    <comment>Flip Side Racing</comment>
+                    <name>FSRaceWin</name>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/fsracewin.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon></windowsIcon>
+                    <windowsPath>${installdir}</windowsPath>
+                </startMenuShortcut>
+            </startMenuShortcutList>
+        </component>
+        <component>
+            <name>main</name>
+            <description>Main Programs Files</description>
+            <canBeEdited>0</canBeEdited>
+            <detailedDescription>Main Program Files </detailedDescription>
+            <requiredSize>10342</requiredSize>
+            <selected>1</selected>
+            <show>1</show>
+            <folderList>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfiles</name>
+                    <platforms>all</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>${programroot}/FsRaceWin.exe</origin>
+                        </distributionFile>
+                        <distributionDirectory>
+                            <origin>${programroot}/FsRaceWin Libs</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/updates</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/Resources</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
+                </folder>
+            </folderList>
+        </component>
+        <component>
+            <name>nonupgrade</name>
+            <description>Non Upgrade Files</description>
+            <canBeEdited>0</canBeEdited>
+            <detailedDescription>Files that will never be upgraded</detailedDescription>
+            <requiredSize>5703</requiredSize>
+            <selected>1</selected>
+            <show>0</show>
+            <folderList>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfiles</name>
+                    <platforms>all</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>${programroot}/COPYING.txt</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${programroot}/crystals.xml</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${programroot}/language.xml</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${programroot}/preferences.xml</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${programroot}/raceparts.xml</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${programroot}/theme.xml</origin>
+                        </distributionFile>
+                        <distributionDirectory>
+                            <origin>${programroot}/car_images</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/club_logo</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/documentation</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/reports</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/theme</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${programroot}/translations</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
+                </folder>
+            </folderList>
+        </component>
+        <component>
+            <name>database</name>
+            <description>Database</description>
+            <canBeEdited>0</canBeEdited>
+            <requiredSize>20000</requiredSize>
+            <selected>0</selected>
+            <show>0</show>
+            <folderList>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfiles</name>
+                    <platforms>all</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>${programroot}/FlipSideDB</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                </folder>
+            </folderList>
+        </component>
+    </componentList>
+    <preBuildActionList>
+        <setInstallerVariable name="programroot" value="/Users/jeremyauten/Documents/fsrbuilds/fsraceWin/"/>
+    </preBuildActionList>
+    <readyToInstallActionList>
+	<!-- For an upgrade installation -->
+	<actionGroup>
+            <actionList>
+                <componentSelection>
+                    <deselect>nonupgrade,desktop,start</deselect>
+                    <select>main</select>
+                </componentSelection>
+                <showInfo>
+                    <text>An existing installation has been detected.  Program will now be upgraded.</text>
+                </showInfo>
+                <setInstallerVariable name="installationType" value="upgrade"/>
+                <setInstallerVariable name="allowComponentSelection" value="0"/>
+            </actionList>
+            <ruleList>
+                <fileTest condition="exists" path="${installdir}/fsracewin.${platform_exec_suffix}"/>
+            </ruleList>
+        </actionGroup>
+
+	<!-- For a normal installation -->
+	<actionGroup>
+            <actionList>
+                <componentSelection>
+                    <deselect></deselect>
+                    <select>desktop,start,main,nonupgrade</select>
+                </componentSelection>
+                <setInstallerVariable name="allowComponentSelection" value="0"/>
+            </actionList>
+            <ruleList>
+                <fileTest condition="not_exists" path="${installdir}"/>
+            </ruleList>
+        </actionGroup>
+        <actionGroup>
+            <actionList>
+                <componentSelection>
+                    <deselect></deselect>
+                    <select>database</select>
+                </componentSelection>
+                <setInstallerVariable>
+                    <name>allowComponentSelection</name>
+                    <value>0</value>
+                </setInstallerVariable>
+            </actionList>
+            <ruleList>
+                <fileTest>
+                    <condition>not_exists</condition>
+                    <path>${installdir}/FlipSideDB</path>
+                </fileTest>
+            </ruleList>
+        </actionGroup>
+    </readyToInstallActionList>
+    <postInstallationActionList>
+        <setWindowsACL>
+            <action>allow</action>
+            <files>${installdir}</files>
+            <recurseContainers>1</recurseContainers>
+            <recurseObjects>1</recurseObjects>
+            <users>Everyone</users>
+        </setWindowsACL>
+        <removeFilesFromUninstaller>
+            <files>${installdir}/FlipSideDB</files>
+        </removeFilesFromUninstaller>
+    </postInstallationActionList>
+    <postUninstallationActionList>
+        <showQuestion>
+            <default>no</default>
+            <text>Are you sure you want to delete the database in addition to all the other files?</text>
+            <variable>remove_database</variable>
+        </showQuestion>
+        <deleteFile>
+            <path>${installdir}/FlipSideDB</path>
+            <ruleList>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${remove_database}</text>
+                    <value>yes</value>
+                </compareText>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <path>{installdir}/rollback</path>
+        </deleteFile>
+    </postUninstallationActionList>
+    <compressionAlgorithm>lzma</compressionAlgorithm>
+    <enableRollback>1</enableRollback>
+    <enableTimestamp>1</enableTimestamp>
+    <rollbackBackupDirectory>${installdir}/rollback/</rollbackBackupDirectory>
+    <saveRelativePaths>1</saveRelativePaths>
+    <vendor>Flip Side</vendor>
+    <parameterList>
+        <directoryParameter>
+            <name>installdir</name>
+            <description>Installer.Parameter.installdir.description</description>
+            <explanation>Installer.Parameter.installdir.explanation</explanation>
+            <value></value>
+            <default>${platform_install_prefix}/${product_shortname}</default>
+            <allowEmptyValue>0</allowEmptyValue>
+            <cliOptionName>prefix</cliOptionName>
+            <mustBeWritable>1</mustBeWritable>
+            <mustExist>0</mustExist>
+            <width>40</width>
+        </directoryParameter>
+    </parameterList>
+</project>
+

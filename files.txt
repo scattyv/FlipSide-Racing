@@ -1,0 +1,38 @@
+The following files and directories are expected by the compiled software
+
+club_logo
+	Directory contains the logo used for report generation
+COPYING.txt
+	GPL license file
+crystals.xml
+	File contains all the frequencies used by the edit racers screen
+documentation
+	Directory contains the documentation
+FlipSideDB
+	Database file containing racer, race and theme data.  If this file is missing it will be automatically generated.
+language.xml
+	File contains the spoken text for the program
+preferences.xml
+	File contains various settings used within the program.  This file is regenerated each time a setting is changed
+raceparts.xml
+	File contains some of the lists of items used for popup menus on the edit racers screen
+reports
+	Directory contains the template files for generating reports.  Generated reports are stored within this directory.
+reports/indent.xsl
+	File creates indentation in report xml files
+reports/race.xsl
+	File contains template information for the race reports
+reports/racerinventory.xsl
+	File contains the template information for the racer inventory
+theme
+	Directory contains some of the default sounds and graphics used by the program
+theme.xml
+	File is no longer used after version 0.44, all options are moved to the database
+translations
+	Directory contains alternate speech translations that can be selected
+updates
+	Directory contains any updates needed to upgrade software to the latest version
+fsracewin.exe or FsRace OS X
+	File is the executable for the program
+
+In addition to the above directories the car_images directory is optionally included.  This directory contains a variety of car images that can be used for each racer.

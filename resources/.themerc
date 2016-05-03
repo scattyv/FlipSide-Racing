@@ -1,0 +1,69 @@
+  # Main window properties
+  # width, height, x position, y position
+Window Width  = 1152
+Window Height = 844
+
+TextDeltaX = 350
+TextDeltaY = 30
+
+  # Stats Graph colors and positions
+Graph Position X = 60
+Graph Position Y = 255
+Graph Width = 1180
+Graph Height = 315
+Graph Dot Size = 4
+Graph Dot Color = #40acd0
+Graph Dot Active = #ffffff
+Graph Dot Max = #ff4f11
+Graph Dot Min = #2cff2c
+Graph Line Width = 1
+Graph Line Color = #cbbde1 #ff0000 #00ff00 #0000ff #ff6600 #00ffff #9900ff #00ccff #ff00ff #99ff00 #33cc99 #660099
+Graph Axis Color = #b01313
+Graph Max Grid = 8
+
+
+  # Stats dipay list Postitions
+Stats List X = 450
+Stats List Y = 65
+Stats List Rows = 9
+Stats Characters = 55
+
+
+  # Frame colors
+Frame Foreground Color = #ffffff
+Frame Background Color = #343434
+
+  # Entry text attributes
+Text Position Y = 88
+Text Font Family       = helvetica
+Text Font Size         = 10
+Text Background Color  = #666666
+Text Foreground Color  = #ffffff
+Text Select Background = #ffffff
+Text Select Foreground = #666666
+
+  # Race window attributes
+  # List height is the vertical separation between display entries.
+  # List top is the starting vertical position of display entries.
+Racer List Height    = 88
+Racer List Top       = 125
+Racer Font Size      = 18
+Racer Font Family    = helvetica
+Racer Font Color     = #ffffff
+
+  # Set the horizontal position of scoreboard display items.
+Show Car X           = 25
+Show Name X          = 250
+Show Laps X          = 655
+Show Time X          = 820
+Show Pace X          = 1010
+Show Lag X           = 1115
+
+  # Clock, Countdown, and status bar positions
+Show Clock X         = 500
+Show Clock Y         = 13
+Show Countdown X     = 500
+Show Countdown Y     = 300
+Show Status X        = 640
+Show Status Y        = 65
+

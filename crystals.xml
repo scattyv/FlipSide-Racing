@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use AMfreq for AM crystals, FMfreq for FM crystals and other for anything else -->
+<freq>
+	<other>2.4 GHz</other>
+	<AMfreq>26.815</AMfreq>
+	<AMfreq>26.835</AMfreq>
+	<AMfreq>26.855</AMfreq>
+	<AMfreq>26.875</AMfreq>
+	<AMfreq>26.895</AMfreq>
+	<AMfreq>26.915</AMfreq>
+	<AMfreq>26.935</AMfreq>
+	<AMfreq>26.955</AMfreq>
+	<AMfreq>26.975</AMfreq>
+	<AMfreq>26.995</AMfreq>
+	<AMfreq>27.005</AMfreq>
+	<AMfreq>27.015</AMfreq>
+	<AMfreq>27.025</AMfreq>
+	<AMfreq>27.035</AMfreq>
+	<AMfreq>27.045</AMfreq>
+	<AMfreq>27.055</AMfreq>
+	<AMfreq>27.065</AMfreq>
+	<AMfreq>27.075</AMfreq>
+	<AMfreq>27.085</AMfreq>
+	<AMfreq>27.095</AMfreq>
+	<AMfreq>27.105</AMfreq>
+	<AMfreq>27.115</AMfreq>
+	<AMfreq>27.125</AMfreq>
+	<AMfreq>27.135</AMfreq>
+	<AMfreq>27.145</AMfreq>
+	<AMfreq>27.175</AMfreq>
+	<AMfreq>27.195</AMfreq>
+	<AMfreq>27.225</AMfreq>
+	<AMfreq>27.255</AMfreq>
+	<AMfreq>27.28</AMfreq>
+	<AMfreq>27.3</AMfreq>
+	<AMfreq>27.32</AMfreq>
+	<AMfreq>27.34</AMfreq>
+	<AMfreq>27.36</AMfreq>
+	<AMfreq>27.38</AMfreq>
+	<AMfreq>27.4</AMfreq>
+	<AMfreq>27.42</AMfreq>
+	<AMfreq>27.46</AMfreq>
+	<AMfreq>27.49</AMfreq>
+	<AMfreq>27.51</AMfreq>
+	<AMfreq>27.54</AMfreq>
+	<AMfreq>27.56</AMfreq>
+	<AMfreq>27.59</AMfreq>
+	<AMfreq>27.61</AMfreq>
+	<AMfreq>27.64</AMfreq>
+	<AMfreq>27.66</AMfreq>
+	<AMfreq>27.69</AMfreq>
+</freq>

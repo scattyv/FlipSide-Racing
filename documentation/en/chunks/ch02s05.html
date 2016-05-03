@@ -1,0 +1,61 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2.5. Database Utilities</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot_9469"><link rel="home" href="index.html" title="Flip Side Racing Software"><link rel="up" href="ch02.html" title="Chapter 2. General Config Screen"><link rel="prev" href="ch02s04.html" title="2.4. General Settings"><link rel="next" href="ch02s06.html" title="2.6. Email Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.5. Database Utilities</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02s04.html">Prev</a> </td><th width="60%" align="center">Chapter 2. General Config Screen</th><td width="20%" align="right"> <a accesskey="n" href="ch02s06.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp137008"></a>2.5. Database Utilities</h2></div></div></div>
+      
+
+      <p>Many of the functions of the application are using a <a class="link" href="ch10s09.html" title="10.9. Database Information">SQLite database</a> to store relational
+      information. Under this heading you will find utilities to modify some
+      aspects of the <a class="link" href="ch10s09.html" title="10.9. Database Information">database</a>.</p>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="EditMakeModel"></a>2.5.1. Edit Make/Models</h3></div></div></div>
+        
+
+        <p>When creating or editing racers you have the ability to select a
+        Make and Model of the car they are driving. To add options to the
+        <a class="link" href="ch03.html" title="Chapter 3. Edit Racers Screen">Edit Racers</a> screen for Makes
+        and Models you need to use the Edit Make/Model utility. By clicking
+        this button a small window will pop up allow you to create new Makes
+        or add Models for a particular Make of a car. This information is then
+        stored back in the <a class="link" href="ch10s09.html" title="10.9. Database Information">database</a>
+        permanently.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp142544"></a>2.5.2. Import/Export Racers</h3></div></div></div>
+        
+
+        <p>The Import/Export Racers buttons allow you to import or export
+        the racer information from the <a class="link" href="ch03.html" title="Chapter 3. Edit Racers Screen">Edit
+        Racers</a> screen. This does not include any race information, only
+        information about that particular racer such as name, <a class="link" href="ch08s11.html" title="8.11. UID">UID</a> and other car details. Records with a
+        duplicate <a class="link" href="ch08s11.html" title="8.11. UID">UID</a> will cause an error and not
+        be imported.</p>
+
+        <p>This could be useful if you are traveling to another club, you
+        can export the racer information from your computer and then send it
+        to the other club director who then imports it. Then when your group
+        arrives for racing all your cars are already entered into the program.
+        Or if you want to start with a clean <a class="link" href="ch10s09.html" title="10.9. Database Information">database</a> but do not want to reenter all the
+        racer information you can export the racer information download a new
+        copy of the software and import your racer information.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="GenerateRacerInventoryReport"></a>2.5.3. Racer Inventory Report</h3></div></div></div>
+        
+
+        <p>The Racer Inventory Report button generates a report showing all
+        the individual racer information. This report includes the club name
+        and log at the top followed by a table of racer information. The
+        report is automatically saved to a directory under the reports
+        directory that is named Racer Inventory followed by the date and time.
+        Within the Racer Inventory Report directory will be a HTML report
+        along with the original XML data and a copy of the logo.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp149264"></a>2.5.4. Vacuum</h3></div></div></div>
+        
+
+        <p>If you encounter slow database performance the Vacuum operation
+        can help speed things up. Vacuum will remove unused space, defragment
+        and compress your database allowing for faster operations. If you
+        frequently delete races your database can become very fragmented and
+        this operation would be beneficial.</p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch02s04.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch02.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch02s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">2.4. General Settings </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 2.6. Email Settings</td></tr></table></div></body></html>

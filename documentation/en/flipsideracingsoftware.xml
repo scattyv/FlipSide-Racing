@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Flip Side Racing Software</title>
+
+    <author>
+      <personname><firstname>Jeremy</firstname><surname>Auten</surname></personname>
+
+      <affiliation>
+        <orgname>Flip Side Racing</orgname>
+      </affiliation>
+    </author>
+
+    <pubdate>2011/03/04</pubdate>
+  </info>
+
+  <chapter xml:id="GettingStarted">
+    <title>Getting Started</title>
+
+    <section>
+      <title>General Information</title>
+
+      <para>Flip Side Racing Software is an open source, cross platform lap
+      counting software project that currently supports the <link
+      linkend="CoreSpeedway">Core Speedway</link>, <link
+      linkend="KyoshoIC">Kyosho IC</link>, <link linkend="I-Lap">I-Lap</link>,
+      <link linkend="Trackmate">Trackmate</link>, <link
+      linkend="AMBrc">AMBrc</link> and <link
+      linkend="Robitronic">Robitronic</link> lap counters or the use of a
+      keyboard. This software has been developed with a great amount of useful
+      input from the Mini-Z community at the <link
+      xlink:href="http://mini-zracer.com/forums/">Mini-ZRacer.com
+      Forums</link> and was designed with the <link linkend="HFAYOLPS">How
+      Fast Are You OnLine Point Series</link> in mind. If you have not looked
+      into the How Fast Are You OnLine Point Series you should take a moment
+      to visit their website at <link
+      xlink:href="http://www.howfastareyou.com">www.howfastareyou.com</link>.
+      Any group that has at least 3 people, <link
+      xlink:href="http://www.rcptracks.com">RCP track</link> and a suitable
+      lap counter can race against people around the world.</para>
+
+      <para><emphasis role="bold">Features</emphasis></para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Supports <link linkend="CoreSpeedway">Core Speedway</link>,
+          <link linkend="KyoshoIC">Kyosho IC</link>, <link
+          linkend="I-Lap">I-Lap</link>, <link
+          linkend="Trackmate">Trackmate</link>, <link
+          linkend="AMBrc">AMBrc</link> and <link
+          linkend="Robitronic">Robitronic</link> lap counters</para>
+        </listitem>
+
+        <listitem>
+          <para>Use cheap generic <link linkend="RFID">RFID</link> tags</para>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="TTS">Text to speech</link> engine, the software
+          will attempt to pronounce names and can dynamically announce things
+          during the race such as ranks, individual best laps and time
+          remaining</para>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="LiveGraphing">Live graphing</link>, during a
+          race you can look at the graphs of racers progress</para>
+        </listitem>
+
+        <listitem>
+          <para>Add racers anytime during a race, useful especially for
+          practices</para>
+        </listitem>
+
+        <listitem>
+          <para>Start races without adding anyone before the race, useful for
+          practices</para>
+        </listitem>
+
+        <listitem>
+          <para>Generates <link linkend="HFAYOLPS">How Fast Are You OnLine
+          Point Series</link> information</para>
+        </listitem>
+
+        <listitem>
+          <para>HTML and XML data race report export</para>
+        </listitem>
+
+        <listitem>
+          <para>Available for Windows and Mac</para>
+        </listitem>
+
+        <listitem>
+          <para>Open source</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Setting up the Hardware</title>
+
+      <para>The first step is to set up the lap counting hardware. Use the
+      following steps to quickly get the hardware set up.</para>
+
+      <orderedlist>
+        <listitem>
+          <para>Go to the <link linkend="GeneralConfigScreen">General
+          Config</link> Screen using the General Config. button on the upper
+          right hand of the window.</para>
+        </listitem>
+
+        <listitem>
+          <para>On the <link linkend="GeneralConfigScreen">General
+          Config</link> Screen go down to the <link
+          linkend="HardwareSettings">Hardware Settings</link> section on the
+          lower left of the window.</para>
+        </listitem>
+
+        <listitem>
+          <para>Choose the hardware type from the drop down menu. If you are
+          using the <link linkend="Keyboard">Keyboard</link> this go to the
+          last step, otherwise proceed to the next step.</para>
+        </listitem>
+
+        <listitem>
+          <para>For the <link linkend="Hardware">hardware</link> lap counters
+          you must select the correct <link linkend="COMPort">COM Port</link>
+          from the <link linkend="COMDeviceSelection">COM Device
+          Selection</link> drop down menu and click Save Connection. The
+          connection will save even if you select the wrong <link
+          linkend="COMPort">COM Port</link>, if you are unsure of what <link
+          linkend="COMPort">COM Port</link> is the correct one refer to the
+          <link linkend="COMPort">COM Port hardware documentation</link>. If
+          lap counting hardware does not appear to be detected by your
+          Operating System you may need to install a driver, further
+          information can be found in the <link linkend="DeviceDriver">Device
+          Driver</link> section of the <link
+          linkend="Hardware">Hardware</link> chapter.</para>
+        </listitem>
+
+        <listitem>
+          <para>While you are still on the <link
+          linkend="GeneralConfigScreen">General Config</link> Screen enter
+          your <link linkend="ClubName">Club Name</link> under the <link
+          linkend="ClubInfo">Club Info</link> and select your club logo for
+          the <link linkend="ClubLogo">Report Logo Image</link>.</para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    <section>
+      <title>Creating Racers</title>
+
+      <para>After correctly setting up your hardware you are ready to create
+      racers. You must create racers before you start your first race. Use the
+      following steps to create some new racers.</para>
+
+      <orderedlist>
+        <listitem>
+          <para>Go to the <link linkend="EditRacersScreen">Edit Racers</link>
+          Screen using the Edit Racers button on the upper portion of the
+          window.</para>
+        </listitem>
+
+        <listitem>
+          <para>Click the <link linkend="CreateNewRacer">Create New
+          Racer</link> button to create a new racer with blank
+          information.</para>
+        </listitem>
+
+        <listitem>
+          <para>Now that a new blank racer has been created the information
+          about the racer needs to be populated, the only required fields are
+          the Name and the UID though it is recommended that you also select
+          an image for the racer. How the UID is populated depends on the
+          hardware you are using.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><emphasis role="bold">Core Speedway:</emphasis> To get the
+              UID of a racer with the <link linkend="CoreSpeedway">Core
+              Speedway</link> lap counter put a car with an <link
+              linkend="RFID">RFID Tag</link> above the lap counter antenna and
+              click the scan button.</para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis role="bold">Other Hardware:</emphasis> To get
+              the UID of a racer with other <link
+              linkend="Hardware">hardware</link> lap counters click the scan
+              button and drive a car with a transponder past the lap
+              counter.</para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis role="bold">Keyboard:</emphasis> If you are
+              using the <link linkend="Keyboard">Keyboard</link> to register
+              laps put they key that you want to use for the racer in the UID
+              field.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>After you have entered all the information in about the racer
+          click the Save button to save the racers information. All
+          information is stored in the database.</para>
+        </listitem>
+
+        <listitem>
+          <para>For each additional racer that you need to create you must
+          click the <link linkend="CreateNewRacer">Create New Racer</link>
+          button first and follow the above steps.</para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    <section>
+      <title>Setting Up a Race</title>
+
+      <para>Now that you have set up your hardware and created some racers you
+      are ready to set up a race. Use the following steps to set up your first
+      race.</para>
+
+      <orderedlist>
+        <listitem>
+          <para>All the race settings are defined on the <link
+          linkend="RaceConfigScreen">Race Config</link> Screen, go to the
+          <link linkend="RaceConfigScreen">Race Config</link> Screen by
+          clicking the Race Config. button on the top of the window.</para>
+        </listitem>
+
+        <listitem>
+          <para>While it is not required when the <link
+          linkend="RaceName">Auto Name</link> feature is enabled you can enter
+          a <link linkend="RaceName">Race Name</link>. The <link
+          linkend="RaceName">Race Name</link> field is added to each race name
+          along with the round type, date and time.</para>
+        </listitem>
+
+        <listitem>
+          <para>By default there are no <link linkend="RaceProfiles">Race
+          Profiles</link> created, <link linkend="RaceProfiles">Race
+          Profiles</link> can be useful but are not required. You can change
+          all the race settings manually on this page to what you need for
+          your race. If you have a multiple different types of races that you
+          run it would be convenient to create a <link
+          linkend="RaceProfiles">Race Profile</link> for each race so that you
+          can select a profile instead of having to change each setting
+          manually.</para>
+        </listitem>
+
+        <listitem>
+          <para>If you have any questions about the available settings for a
+          race you can find further information in the <link
+          linkend="RaceConfigScreen">Race Config</link> chapter.</para>
+        </listitem>
+
+        <listitem>
+          <para>After adjusting any race settings you are ready to run a race,
+          proceed to the next section <link linkend="RunningaRace">Running a
+          Race</link>.</para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    <section xml:id="RunningaRace">
+      <title>Running a Race</title>
+
+      <para>You are now ready to run a race, all races run from the <link
+      linkend="RaceScreen">Race Screen</link>. When a race is started the
+      software will automatically add racers to the race as they are detected.
+      Below are a few details about this feature.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Automatically Add Racers:</emphasis> The
+          software has the ability to add any detected car to a race
+          automatically. They must have already been defined in the <link
+          linkend="EditRacersScreen">Edit Racers</link> Screen which you did
+          earlier when creating new racers. The first time the car is detected
+          it will be added to the race automatically then the next time they
+          cross the lap counter will be counted as their first lap.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>To start a race you must click the Start Race button. Clicking
+      this button will begin the <link linkend="CountDownTime">Count
+      Down</link> to start the race. The race will then run according to the
+      <link linkend="RaceType">Race Type</link> you selected on the <link
+      linkend="RaceConfigScreen">Race Config</link> Screen.</para>
+
+      <para>During a race many features are disabled, you can only go to the
+      <link linkend="RaceScreen">Race</link> or <link
+      linkend="StatisticsScreen">Statistics</link> Screens. The <link
+      linkend="RaceScreen">Race Screen</link> will show you the current ranks
+      and other information about the race while the <link
+      linkend="StatisticsScreen">Statistics Screen</link> will show a <link
+      linkend="LiveGraphing">Live Graph</link> of the current racers during a
+      race.</para>
+    </section>
+
+    <section>
+      <title>Viewing Results</title>
+
+      <para>After you have completed a race you can go back and view the
+      results for any prior race. To see information about previous races you
+      need to go to the <link linkend="StatisticsScreen">Statistics
+      Screen</link>. On this screen you have the ability graph previous races,
+      individual racers and generate reports about those races.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="GeneralConfigScreen">
+    <title>General Config Screen</title>
+
+    <para>The General Config. Screen contains various settings that control
+    the overall operation of the program including setting up the hardware,
+    defining audio settings, and your general club information. You access the
+    General Config. Screen by clicking the General Config. button on the top
+    row of buttons in the program. All settings that are changed on this
+    screen are saved immediately to the preferences.xml file except for the
+    COM Device Selection settings.</para>
+
+    <section xml:id="ClubInfo">
+      <title>Club Info</title>
+
+      <para>The settings under the Club Info heading are used throughout the
+      program.</para>
+
+      <section xml:id="ClubName">
+        <title>Club Name</title>
+
+        <para>Make sure to set your club name correctly. The Club Name is used
+        by the various reports generated by the program, such as the Race
+        Report, Racer Inventory Report and the <link linkend="HFAYOLPS">HFAY
+        OLPS</link> export. By setting this value correctly any time you
+        generate a report your club name will be already in the report.</para>
+      </section>
+
+      <section xml:id="ClubLogo">
+        <title>Report Logo Image</title>
+
+        <para>The Report Logo image is used by the two reports generated by
+        the program, the <link linkend="GenerateRaceReport">Race Report</link>
+        and the <link linkend="GenerateRacerInventoryReport">Racer Inventory
+        Report</link>. The image that you set here will be included in any new
+        reports that you generate.</para>
+      </section>
+    </section>
+
+    <section xml:id="GUISettings">
+      <title>GUI Settings</title>
+
+      <para>GUI Settings change how the <link linkend="RaceScreen">Race
+      Screen</link> and <link linkend="StatisticsScreen">Statistics
+      Screen</link> operate. By using these settings you can allow more racers
+      per race or help a machine that may be too slow for live
+      graphing.</para>
+
+      <section xml:id="ChangeTextColor">
+        <title>Slot Colors</title>
+
+        <para>The Slot Colors list box controls what color the text will be on
+        the <link linkend="RaceScreen">Race Screen</link> for each racer slot
+        and on the <link linkend="StatisticsScreen">Statistics Screen</link>
+        for each graph line. Click on the text in the list box to change the
+        color. A window will pop up allowing you to select any color.</para>
+      </section>
+
+      <section xml:id="MaximumRacers">
+        <title>Maximum Number of Racers</title>
+
+        <para>This sets the maximum number of racers allowed in a race. The
+        default setting is 8 but you can go as high as 24 racers in a race. Be
+        careful, if you set this value too high you may not be able to see all
+        the racers on the screen. Modify the row spacing to increase the
+        number of racers that can be seen on the screen at once.</para>
+      </section>
+
+      <section>
+        <title>Row Spacing</title>
+
+        <para>Changing the Row Spacing changes the amount of space between
+        each racer on the <link linkend="RaceScreen">Race Screen</link>. By
+        making this value smaller you can fit more racers on the screen at
+        once. The default value is 13. With this default value 8 racers will
+        fit on a XGA (1024x720) screen.</para>
+      </section>
+
+      <section xml:id="DisableLiveGraphing">
+        <title>Disable Live Race Graphing</title>
+
+        <para><link linkend="LiveGraphing">Live Graphing</link> can be a CPU
+        intensive operation especially if you have a long race with a large
+        number of racers. The Disable Live Race Graphing option allows you to
+        permanently disable this feature for computers that may not be fast
+        enough. Though as long as you are not on the <link
+        linkend="StatisticsScreen">Statistics Screen</link> the live graphing
+        will not be running.</para>
+      </section>
+
+      <section xml:id="ThemeButton">
+        <title>Theme</title>
+
+        <para>On the General Config Screen you can select which theme to apply
+        to the program. Themes modify the appearance and sound effects of the
+        program. To change settings of a theme click the Manage Theme button
+        under the Theme heading. More information about themes can be found in
+        the <link linkend="Theme">Theme</link> chapter.</para>
+      </section>
+    </section>
+
+    <section xml:id="HardwareSettings">
+      <title>Hardware Settings</title>
+
+      <para>The Hardware Settings heading contains options for configuring any
+      external devices you are using with the software.</para>
+
+      <section>
+        <title>Hardware Type</title>
+
+        <para>You must set the correct Hardware Type for the application to
+        operate. If you set this to <link linkend="Keyboard">Keyboard</link>
+        then for each racer you must set the <link linkend="UID">UID</link> to
+        the key you are going to press to register a lap for them. For the
+        other <link linkend="Hardware">hardware types</link> you must define
+        the correct COM port for the software to operate.</para>
+      </section>
+
+      <section xml:id="Accuracy">
+        <title>Accuracy</title>
+
+        <para>Accuracy is set to automatic by default. This setting defines
+        what level of accuracy the lap counter provides for lap times. It is
+        recommended to keep this on automatic as this will use the appropriate
+        accuracy for your defined hardware type but you can manually define
+        0.01 second or 0.001 second accuracy if needed.</para>
+      </section>
+
+      <section xml:id="COMDeviceSelection">
+        <title>COM Device Selection</title>
+
+        <para>If you have a <link linkend="Hardware">hardware</link> lap
+        counter you must select the correct COM port here for the software to
+        operate. After selecting the correct COM port you must click the Save
+        Connection button for the settings to be saved and for communication
+        with the lap counter to be initialized. After saving this setting it
+        will automatically be used.</para>
+      </section>
+
+      <section xml:id="SecondaryCOMDevice">
+        <title>Secondary COM Device Selection</title>
+
+        <para>In the event that you have a second lap counter connected to the
+        computer you must define what COM port it uses using the Secondary COM
+        Device Selection setting. After selecting the correct COM port click
+        the Save Connection button to save the settings and initialize
+        communication. The secondary lap counter will only be used for
+        register laps, it does not work with the <link
+        linkend="EditRacersScreen">Edit Racers</link> Screen. Only use this
+        setting if you have a second lap counter attached.</para>
+      </section>
+
+      <section>
+        <title>Relay Board COM Device Selection</title>
+
+        <para>A <link linkend="RelayBoard">DLPIOR4 Relay Board</link> can be
+        used to control Start/Stop lights. The application will control the
+        relay board, during the starting race countdown the relay board can
+        will have Relay 4 active until 2 seconds left in the countdown, at 2
+        seconds it will switch Relay 4 off and Relay 3 on, at 1 second it will
+        switch Relay 3 off and Relay 2 on and finally at the start of the race
+        it will switch Relay 2 off and Relay 1 on. When the race time limit or
+        lap limit is reached race Relay 1 will turn off and Relay 2 will turn
+        on. When everyone has finished their final laps or timed out Relay 2
+        will turn off and Relay 4 will turn on. You can connect lights to
+        these relays to have a start/stop light for races.</para>
+
+        <para>If you have <link linkend="RelayBoard">this relay board</link>
+        attached to the computer use this setting to define what COM port it
+        is using. After selecting the correct COM port click the Save
+        Connection button to save the settings and initialize
+        communication.</para>
+      </section>
+    </section>
+
+    <section xml:id="GeneralSettings">
+      <title>General Settings</title>
+
+      <para>Under the General Settings heading is settings that do not fit in
+      other headings.</para>
+
+      <section>
+        <title>Audio</title>
+
+        <para>If for some reason you need to disable the audio or are running
+        this application on a system that does not have a sound card use this
+        setting to turn off the audio. This will disable any <link
+        linkend="SoundEffects">sounds</link> and <link
+        linkend="TTS">speech</link> of the application.</para>
+      </section>
+
+      <section>
+        <title>Check for Updates</title>
+
+        <para>The Check for Updates setting allows the program to see if there
+        is a newer version of the program available for download. This check
+        will happen each time the program launches. If there is a new version
+        available you will be prompted with a pop up window asking if you want
+        to go to the website and download it or not. When the software checks
+        for an update it will send various information about your setup to the
+        server. This information includes the version number, your club name,
+        number of racers, number of races, hardware type and operating system.
+        Use this setting to disable checking for updates.</para>
+      </section>
+
+      <section xml:id="SpeechFile">
+        <title>Speech File</title>
+
+        <para>This drop down will automatically populate with the speech files
+        available when the program is launched. Speech files are stored in the
+        translations directory. By default the americanenglish speech file is
+        used. It is possibly to use additional translations such as German and
+        French or to create your own translation. To learn more about
+        translations read the <link linkend="Translations">Translations</link>
+        section in <link linkend="AdvancedTopics">Advanced
+        Topics</link>.</para>
+      </section>
+
+      <section>
+        <title>Close Program Prompt</title>
+
+        <para>This option allows you to control if and when you get prompted
+        about whether or not you want to close the program. If this setting is
+        set to "Always" then any time you try to close the program you will be
+        prompted to confirm your action. If this setting is set to "During
+        Races" then you will only be prompted if a race is active, while if
+        you set it to "Never" you will not be prompted at any time to confirm
+        you want to close the program.</para>
+      </section>
+
+      <section>
+        <title>Import All Data</title>
+
+        <para>If you have a new copy of the software and you want to import
+        all settings, racers and races from an existing copy use this option.
+        When you click this button you will be prompted to select the folder
+        where the existing copy is located. The program will then overwrite
+        the information in the new copy with the data from the existing
+        copy.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Database Utilities</title>
+
+      <para>Many of the functions of the application are using a <link
+      linkend="Database">SQLite database</link> to store relational
+      information. Under this heading you will find utilities to modify some
+      aspects of the <link linkend="Database">database</link>.</para>
+
+      <section xml:id="EditMakeModel">
+        <title>Edit Make/Models</title>
+
+        <para>When creating or editing racers you have the ability to select a
+        Make and Model of the car they are driving. To add options to the
+        <link linkend="EditRacersScreen">Edit Racers</link> screen for Makes
+        and Models you need to use the Edit Make/Model utility. By clicking
+        this button a small window will pop up allow you to create new Makes
+        or add Models for a particular Make of a car. This information is then
+        stored back in the <link linkend="Database">database</link>
+        permanently.</para>
+      </section>
+
+      <section>
+        <title>Import/Export Racers</title>
+
+        <para>The Import/Export Racers buttons allow you to import or export
+        the racer information from the <link linkend="EditRacersScreen">Edit
+        Racers</link> screen. This does not include any race information, only
+        information about that particular racer such as name, <link
+        linkend="UID">UID</link> and other car details. Records with a
+        duplicate <link linkend="UID">UID</link> will cause an error and not
+        be imported.</para>
+
+        <para>This could be useful if you are traveling to another club, you
+        can export the racer information from your computer and then send it
+        to the other club director who then imports it. Then when your group
+        arrives for racing all your cars are already entered into the program.
+        Or if you want to start with a clean <link
+        linkend="Database">database</link> but do not want to reenter all the
+        racer information you can export the racer information download a new
+        copy of the software and import your racer information.</para>
+      </section>
+
+      <section xml:id="GenerateRacerInventoryReport">
+        <title>Racer Inventory Report</title>
+
+        <para>The Racer Inventory Report button generates a report showing all
+        the individual racer information. This report includes the club name
+        and log at the top followed by a table of racer information. The
+        report is automatically saved to a directory under the reports
+        directory that is named Racer Inventory followed by the date and time.
+        Within the Racer Inventory Report directory will be a HTML report
+        along with the original XML data and a copy of the logo.</para>
+      </section>
+
+      <section>
+        <title>Vacuum</title>
+
+        <para>If you encounter slow database performance the Vacuum operation
+        can help speed things up. Vacuum will remove unused space, defragment
+        and compress your database allowing for faster operations. If you
+        frequently delete races your database can become very fragmented and
+        this operation would be beneficial.</para>
+      </section>
+    </section>
+
+    <section xml:id="EmailSettings">
+      <title>Email Settings</title>
+
+      <para>Using the settings in this section will allow the software to
+      automatically send out race reports to admins and/or racers after a race
+      has been completed. For racers to receive email you must define an email
+      address for that racer on the <link linkend="EditRacersScreen">Edit
+      Racers</link> screen.</para>
+
+      <section>
+        <title>Server Name</title>
+
+        <para>This must be set to the SMTP server name for your email
+        provider. For example if you are using Gmail this setting must be set
+        to smtp.gmail.com</para>
+      </section>
+
+      <section>
+        <title>Server Port</title>
+
+        <para>This is the port number for your SMTP server, it is set to 25 by
+        default. If your email provider does not indicate a port number and is
+        not using encryption then this is a safe default. If you are using
+        encryption then the port number is most likely 587 or 465. For example
+        in the case of Gmail they are using encryption and have the port
+        number set to 587. Your email provider should indicate what port
+        number to use.</para>
+      </section>
+
+      <section>
+        <title>From Address</title>
+
+        <para>You must set this field to your email address. This is the
+        address that the email's will appear to come from. If you do not set
+        it to the address for your account your email provider may reject the
+        email as spam.</para>
+      </section>
+
+      <section>
+        <title>Admin Addresses</title>
+
+        <para>Enter a comma separated list of email addresses into this field.
+        If you define the recipients to include admins the listed admin email
+        addresses will get a copy of each race report sent whether they are in
+        the race or not.</para>
+      </section>
+
+      <section>
+        <title>Username</title>
+
+        <para>Set this setting to the username of your email account.
+        Depending on your email provider this may be a normal username or it
+        may be your from email address. For example in the case of Gmail this
+        is your from email address.</para>
+      </section>
+
+      <section>
+        <title>Password</title>
+
+        <para>Set this to the password for your email account. To protect your
+        password it is not displayed on the screen, only dots will
+        appear.</para>
+      </section>
+
+      <section>
+        <title>Recipients</title>
+
+        <para>Recipients defines who will receive race reports. This can be
+        set to Admins, Racers or Admins and Racers. If set to include Racers
+        you must set the email addresses for each racer that wants to receive
+        the reports. You do this by editing the racers information on the
+        <link linkend="EditRacersScreen">Edit Racers</link> screen.</para>
+      </section>
+
+      <section>
+        <title>Race Reports</title>
+
+        <para>This setting defines which type or races will send a report. By
+        default the software will only send out reports for Mains. You can
+        change this to send out reports for all races, or to send out reports
+        for all races but practices. Race reports are sent immediately after
+        the race is completed.</para>
+      </section>
+
+      <section>
+        <title>SSL Encryption</title>
+
+        <para>Enable SSL Encryption if your email provider allows this option.
+        If your email server supports this make sure to set the server port to
+        the correct number. For example Gmail requires the use of port 587
+        with SSL Encryption.</para>
+      </section>
+
+      <section>
+        <title>Test Button</title>
+
+        <para>After you have defined the necessary email settings you can test
+        the email functionality using the test button. This will send a basic
+        email message to the defined from address. If you do not receive this
+        test message then either check your junk mail folder or verify your
+        email settings.</para>
+      </section>
+    </section>
+  </chapter>
+
+  <chapter xml:id="EditRacersScreen">
+    <title>Edit Racers Screen</title>
+
+    <para>The Edit Racers Screen is used for creating, editing, deleting and
+    viewing racer information. All racer information is stored in the <link
+    linkend="Database">database</link>.</para>
+
+    <section xml:id="CreateNewRacer">
+      <title>Creating Racers</title>
+
+      <para>To create a new racer you must first click the Create New Racer
+      button. Clicking this button creates a new blank record for a racer that
+      you can then edit and save. Each new racer must have a <link
+      linkend="UID">UID</link> and a name defined. All the other fields are
+      optional though selecting a <link linkend="RacerImages">Racer
+      Image</link> is recommended. After you have entered the info in for a
+      racer you must click the Save button to save the record. The racer will
+      then show up in the racer table on the right of the screen.</para>
+
+      <para>If you wish to copy a UID for an existing racer you can click the
+      drop down arrow on the left of the UID field to select a particular UID
+      from the list of available ones. While multiple racers can have the same
+      UID only 1 racer with a particular UID may be enabled at a time.</para>
+
+      <section>
+        <title>Core Speedway Specific Info</title>
+
+        <para>When creating a new racer for the <link
+        linkend="CoreSpeedway">Core Speedway</link> lap counter after you
+        click the Create New Racer button you must click the Scan button next
+        to the <link linkend="UID">UID</link> field. The car you are scanning
+        must be on top of the antenna loop. The scan button will perform one
+        quick scan, if a tag is detected the <link linkend="UID">UID</link>
+        will display in the <link linkend="UID">UID</link> field.</para>
+      </section>
+
+      <section>
+        <title>Other Lap Counter Hardware Info</title>
+
+        <para>When creating a new racer for other <link
+        linkend="Hardware">hardware</link> based lap counters after you click
+        the Create New Racer button you must click the Scan button next to the
+        <link linkend="UID">UID</link> field. The scan will run for 5 seconds,
+        during this time the car you are scanning must then be driven over the
+        antenna ribbon or below the detection bridge. If a new car is detected
+        the <link linkend="UID">UID</link> will display in the <link
+        linkend="UID">UID</link> field.</para>
+      </section>
+
+      <section>
+        <title>Keyboard Specific Info</title>
+
+        <para>The software has the ability to use the <link
+        linkend="Keyboard">keyboard</link> for registering the laps instead of
+        using lap counter hardware. If you want to use this mode of operation
+        each racer must have the <link linkend="UID">UID</link> field set to
+        unique key. You are not limited to just numbers, it can be almost any
+        key on the keyboard. Do not use the "r" key though, this key is used
+        to announce the ranks during a race.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Editing Racers</title>
+
+      <para>To edit an existing racer you must click on the racer in the table
+      on the race side of the screen. After click the racer all the
+      information about the racer will be displayed in the fields on the left
+      side of the screen. After you have made changes to the record you must
+      click Save to save the changes.</para>
+
+      <para>If you need to change the <link linkend="UID">UID</link> of a
+      racer then first select the racer that needs changed and then if you are
+      using <link linkend="Hardware">lap counting hardware</link> you use the
+      Scan button the same way as when you create racers. As long as the <link
+      linkend="UID">UID</link> is not already used by another racer the scan
+      will overwrite the existing <link linkend="UID">UID</link> and then you
+      can save the racers information. If you are using the <link
+      linkend="Keyboard">keyboard</link> for lap counting then you can just
+      manually update the <link linkend="UID">UID</link> field.</para>
+    </section>
+
+    <section xml:id="RacerImages">
+      <title>Racer Image</title>
+
+      <para>When creating a racer you can select a racer image. The software
+      comes with an assortment of images but you can also use your own. At
+      most the application will display 100x40 pixels of the image you select,
+      the image is automatically resized down to 100x40 pixels.</para>
+    </section>
+
+    <section>
+      <title>Speak Field</title>
+
+      <para>The Speak field under the name allows you to have the program say
+      a name other than what is in the Name field. This is useful in cases
+      where someone may have their name match an online ID such as pinwc4 but
+      the persons name is actually Jeremy. You can put pinwc4 as the Name and
+      put Jeremy in the Speak field. The program will announce the name Jeremy
+      but any reports will show the name pinwc4.</para>
+    </section>
+
+    <section>
+      <title>Email Field</title>
+
+      <para>This field defines the email address for this specific racer. You
+      must set email addresses for each racer that wants to automatically
+      receive a race report. Additionally you will need to have the correct
+      email settings defined in the <link linkend="EmailSettings">Email
+      Settings</link> section of the <link
+      linkend="GeneralConfigScreen">General Config</link> screen.</para>
+    </section>
+
+    <section>
+      <title>Enabled</title>
+
+      <para>The enabled checkbox is used to allow you to share cars or
+      transponders with other racers. While you can define multiple racers
+      with the same UID only one racer with a shared <link
+      linkend="UID">UID</link> may be enabled at a time. To enable a different
+      racer that is sharing a transponder you may either click the enabled
+      checkbox in the table showing all the racers which will then
+      automatically save the change or you can select the individual racer in
+      the table and then edit that racers information and click save manually.
+      When you enable a racer the software will automatically disable any
+      other racer that shares that <link linkend="UID">UID</link>.</para>
+    </section>
+
+    <section>
+      <title>Race Car Specific Information</title>
+
+      <para>Details about how to change the options available under the Race
+      Car Specific Information heading can be found in the <link
+      linkend="AdvancedTopics">Advanced Topics</link> chapter under the <link
+      linkend="RaceCarInfoPopUp">Adding Options to the Edit Racer
+      Screen</link> section.</para>
+    </section>
+
+    <section>
+      <title>Deleting Racers</title>
+
+      <para>Deleting a racer is simple. Just select the racer in the table on
+      the right side of the screen and then click Delete.</para>
+
+      <para><emphasis role="bold">WARNING: This operation is permanent, there
+      is no undo.</emphasis></para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="RaceConfigScreen">
+    <title>Race Config Screen</title>
+
+    <para>On the Race Config. Screen you define all the settings for a race,
+    including the race type, name, time limits, etc. Each time the application
+    is launched it will default to the last settings or race profile
+    selected.</para>
+
+    <section xml:id="RaceName">
+      <title>Race Name</title>
+
+      <para>Each race that is ran must have a unique name. By default auto
+      naming of races is enabled. This feature will add the date, time, and
+      round type to whatever is filled in to the Race Name field. Even if you
+      do not enter any information into the race name field the race name will
+      still be unique. If you disable the Auto Name feature you must enter in
+      a unique name for each race before the race is started.</para>
+    </section>
+
+    <section xml:id="RaceProfiles">
+      <title>Race Profiles</title>
+
+      <para>Race profiles are a collection of the race settings other than the
+      Race Name settings that are permanently saved to the <link
+      linkend="Database">database</link>. This allows you to easily retrieve
+      common settings for different race types used by your club. Race
+      profiles are not required to be created but they are usual for switching
+      between race types such as practice races versus mains, or endurance
+      races versus lap races.</para>
+
+      <section>
+        <title>Create Race Profile</title>
+
+        <para>To create a new race profile just click the Create button under
+        the Race Profiles heading. This will pop up a small window where you
+        must enter a unique race profile name. When you click OK on the pop up
+        window the program will create a new race profile using the settings
+        that were defined under the Race Profiles section of the
+        screen.</para>
+      </section>
+
+      <section>
+        <title>Delete Race Profile</title>
+
+        <para>Deleting a race profile is simple, just select the Race Profile
+        in the pop up menu and click the Delete button.</para>
+
+        <para><emphasis role="bold">WARNING: This operation is permanent,
+        there is no undo.</emphasis></para>
+      </section>
+
+      <section>
+        <title>Save Race Profile</title>
+
+        <para>After changing settings for a Race Profile you just click the
+        Save button for them to be saved for later use. If you do not click
+        the save button the settings will be used for those races but after
+        the application is closed and opened again the unsaved settings will
+        be lost.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Race Settings</title>
+
+      <para>Below the Race Profiles section the individual race settings are
+      listed. If race profiles are not being used these settings will default
+      to the last settings used when the application was closed. If a race
+      profile is not used the settings are stored in preferences.xml file
+      otherwise they are stored in the <link
+      linkend="Database">database</link>.</para>
+
+      <section xml:id="RaceType">
+        <title>Race Type</title>
+
+        <para>The Race Type selected changes how the race is tracked, by time
+        or by number of laps. There are 4 race types currently
+        supported.</para>
+
+        <section>
+          <title>Timed Race</title>
+
+          <para>For a timed race the race will end after the time limit has
+          been reached. When the time limit is reached all racers must
+          complete their final lap before the time out. When all racers have
+          completed their final lap or timed out the race will end.</para>
+        </section>
+
+        <section>
+          <title>Lap Race</title>
+
+          <para>In a lap race the race will end after the first person reaches
+          the lap limit. After the lap limit has been reached all other racer
+          must complete their final lap before the time out. When all racers
+          have completed their final lap or timed out the race will
+          end.</para>
+        </section>
+
+        <section>
+          <title>Lap and Timed Race</title>
+
+          <para>With a lap and timed race the race will end after either the
+          lap limit or the time limit is reached. When either the lap or time
+          limit has been reached all remaining racers must complete their
+          final lap before the time out. When all racers have completed their
+          final lap or timed out the race will end.</para>
+        </section>
+
+        <section>
+          <title>Staggered Time Race</title>
+
+          <para>A staggered race is similar to a timed race except each racer
+          gets their own clock based on the time limit setting. Each
+          individual racers clock will not start until after the first time
+          they cross the lap counter. The race will end after the final racers
+          time limit is reached and they have completed their final lap or
+          timed out.</para>
+        </section>
+
+        <section>
+          <title>Free Play Race</title>
+
+          <para>A Free Play race type is intended for open track time. It is
+          not really a true race type, no results are stored. It has the
+          following characteristics:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The race does not end automatically, no lap limit or time
+              limit. You must manually end it by pressing the <link
+              linkend="EndRaceButton">End Race Button</link> on the <link
+              linkend="RaceScreen">Race Screen</link>.</para>
+            </listitem>
+
+            <listitem>
+              <para>Results are not stored to the database after the session
+              is ended.</para>
+            </listitem>
+
+            <listitem>
+              <para>Racers are removed from the race screen if they have not
+              gotten a lap within the <link linkend="TimeOut">Time Out</link>
+              value on the Race Config Screen.</para>
+            </listitem>
+
+            <listitem>
+              <para>Racers can join the session at any time, the first time
+              they cross the lap counter is considered their start time for
+              calculating lap times.</para>
+            </listitem>
+
+            <listitem>
+              <para>Racers can rejoin a session after they have been timed
+              out, all information has been reset for them including lap
+              counts, times and best lap.</para>
+            </listitem>
+
+            <listitem>
+              <para>No rank or time announcements will be made.</para>
+            </listitem>
+
+            <listitem>
+              <para>Overall and personal best lap times will be
+              announced.</para>
+            </listitem>
+
+            <listitem>
+              <para>On the <link linkend="RaceScreen">Race Screen</link> the
+              pace column will show the average lap time.</para>
+            </listitem>
+
+            <listitem>
+              <para>Ranking on <link linkend="RaceScreen">Race Screen</link>
+              is configurable.</para>
+            </listitem>
+          </itemizedlist>
+
+          <itemizedlist>
+            <listitem>
+              <para>Racers can be manually deleted during the race by double
+              clicking on their name or picture.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+
+      <section>
+        <title>Number of Laps</title>
+
+        <para>This setting defines the lap limit for a Lap or Lap and Time
+        based races. You can type values into the field or use the +/- buttons
+        to increment and decrement the value by 1 lap.</para>
+      </section>
+
+      <section>
+        <title>Time Limit</title>
+
+        <para>For Timed, Lap and Timed and Staggered Time based races the Time
+        Limit value defines how long the race will run. The value in this
+        field is based on minutes. You can type values into the field or use
+        the +/- buttons to increment and decrement the value by 1
+        minute.</para>
+      </section>
+
+      <section>
+        <title>Minimum Lap Time</title>
+
+        <para>The Minimum Lap Time defines the quickest lap time that will be
+        accepted by the software. If a lap is less than this value it will not
+        be recorded. You can enter a value into the field or use the +/-
+        buttons to increment and decrement the value by 1 second.</para>
+      </section>
+
+      <section>
+        <title>Round Type</title>
+
+        <para>The Round Type drop down defines whether this race is a
+        Practice, Heat, Qualifier or Main. This information is used for the
+        summary of the race, the race auto naming field and will show up in
+        the race report.</para>
+      </section>
+
+      <section xml:id="CountDownTime">
+        <title>Starting Count Down</title>
+
+        <para>When a race is started the count down timer will begin. The
+        Count Down Time defines how long the count down before a race will be.
+        If audio is enabled the software will start to announce count down
+        seconds remaining at 5 seconds. If the Count Down Time is set to 8
+        seconds or longer the software will announce "Prepare to Race" and
+        then count down.</para>
+      </section>
+
+      <section>
+        <title>Ending Count Down</title>
+
+        <para>At the specified number of seconds the program will count down
+        the time remaining. For example if set to 5 seconds when only 5
+        seconds are left the program will count down 5, 4, 3, 2, 1 and the
+        race will end. If this is set to 0 it will not count down.</para>
+      </section>
+
+      <section xml:id="TimeOut">
+        <title>Time Out</title>
+
+        <para>When the race time or lap limits have been reached the time out
+        value will be used to end the race for racers that have not completed
+        their final lap. If it takes the racer longer than the time out value
+        to finish the final lap their race will be ended.</para>
+      </section>
+
+      <section>
+        <title>Count Down Type</title>
+
+        <para>Select the style of count down to use for the races. A
+        traditional count down will display the count down time on the screen
+        and when the count down reaches 5 seconds it will start saying the
+        seconds remaining in the count down. When the countdown reaches 0 the
+        starting horn sound will play and the race starts. In an F1 style
+        count down instead of displaying the seconds in the count down the
+        program will beep the specified number of times set as the starting
+        count down number. When it reaches the final beep the program will set
+        a random delay between 1 and 10 seconds before playing the starting
+        horn and starting the race.</para>
+      </section>
+
+      <section>
+        <title>Ending Horn</title>
+
+        <para>This setting defines whether or not the ending horn sound effect
+        plays when a race is complete. The sound effect will be triggered in a
+        timed race when the time limit is reached. In a lap race it will be
+        triggered when the first person reaches the lap limit.</para>
+      </section>
+
+      <section>
+        <title>Lap Indication</title>
+
+        <para>By default when a lap is detected the software will beep but
+        there are other interesting options available.</para>
+
+        <section>
+          <title>Beep</title>
+
+          <para>The default lap indication setting is the beep, this will play
+          a beep sounding wav file.</para>
+        </section>
+
+        <section>
+          <title>Lap Time</title>
+
+          <para>The Lap Indication can be changed to announce the Lap Time
+          using this setting. Each time a new lap is detected the software
+          will say the time. For example is a racer just got a lap time of 7.8
+          seconds then the software will announce 7.8 seconds.</para>
+        </section>
+
+        <section>
+          <title>Lap Difference</title>
+
+          <para>The Lap Different Lap Indication will announce the different
+          between a racers best lap time and their current lap time. If it is
+          a new best lap for that racer the software will announce the new
+          best lap, otherwise it will just be the difference in time between
+          their current time and their best lap time. For example if a racer
+          has a best lap of 7.6 seconds and they just got a new lap of 7.8
+          seconds the software will announce .2 seconds.</para>
+        </section>
+
+        <section>
+          <title>Lap Time 1 Decimal, Lap Time 2 Decimals, Lap Difference 1
+          Decimal and Lap Difference 2 Decimals</title>
+
+          <para>These options are variations of the Lap Time and Lap
+          Difference options that will round the announced time to the
+          specified decimal place. For example if you select Lap Time 1
+          Decimal and get a lap time of 7.123 the software will announce the
+          lap time as 7.1.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Enable Rank Announcements</title>
+
+        <para>If the Enable Rank Announcements setting is enabled then
+        periodically during a race the current ranks of each racer will be
+        announced. Set the Rank Announcement Interval to define when the
+        announcements occur. You can also hit the "r" key at any time and the
+        software will announce the current ranks.</para>
+      </section>
+
+      <section>
+        <title>Rank Announcement Interval</title>
+
+        <para>The Rank Announcement Interval defines how often the current
+        ranks of each racer will be announced if the Enable Rank Announcements
+        feature is enabled. This value sets the number of minutes between rank
+        announcements. You can also hit the "r" key at any time and the
+        software will announce the current ranks.</para>
+      </section>
+
+      <section>
+        <title>Rank Method</title>
+
+        <para>The Rank Method option allows you to change how racers are
+        ranked during a race.</para>
+
+        <section>
+          <title>Total Laps</title>
+
+          <para>This ranking method ranks by the total laps followed by the
+          time they were completed in.</para>
+        </section>
+
+        <section>
+          <title>Best Lap</title>
+
+          <para>This ranking method ranks by the best lap times. This is
+          useful for qualifying rounds.</para>
+        </section>
+
+        <section>
+          <title>Average Lap</title>
+
+          <para>This ranking method ranks by the average lap time. This method
+          of ranking is useful for the free play race mode or staggered start
+          races.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Rank Change Speech</title>
+
+        <para>This setting configures the speech settings for announcing rank
+        changes during a race. If it is set to Lead Change then the program
+        will only announce when someone takes the lead. If it is set to Any
+        Change then the program will announce a rank change any time someone
+        moves up in rank.</para>
+      </section>
+
+      <section>
+        <title>Best Lap Speech</title>
+
+        <para>This option allows you to change when best laps are announced.
+        You can choose between none, personal or overall. When set to personal
+        each races individual best lap time will be announced when it occurs
+        during the race. If set to overall individual racers best lap times
+        will not be announced, only the best lap overall will be announced
+        during the race.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Start Race Button</title>
+
+      <para>The Start Race button will take you to the <link
+      linkend="RaceScreen">Race Screen</link> and automatically start the
+      race.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="RaceScreen">
+    <title>Race Screen</title>
+
+    <para>The Race Screen is the main screen used for starting and running a
+    race. When a race is running this is the screen that shows you the current
+    rank and information about each driver along with the timer for the race.
+    There is also a count down light graphic towards the top right of the
+    screen that changes during the count down before the race.</para>
+
+    <section xml:id="RaceScreenStartButton">
+      <title>Start Race</title>
+
+      <para>To start a race you can click the Start Race button on this
+      screen. When the Start Race button is clicked all racers in slots will
+      be removed and a count down will occur as defined by the <link
+      linkend="CountDownTime">Count Down Time</link> setting on the <link
+      linkend="GeneralConfigScreen">General Config</link> Screen. Racers will
+      be added automatically to the race if detected after the count
+      down.</para>
+    </section>
+
+    <section>
+      <title>Race Information</title>
+
+      <para>While a race is running the information for each racer in a race
+      will be updated on this screen each time a new lap is detected. The
+      information on this screen currently includes the overall timer along
+      with the rank, <link linkend="RacerImages">image</link>, <link
+      linkend="EditRacersScreen">name</link>, laps, time of the last lap, last
+      lap time, pace and best lap of each racer.</para>
+    </section>
+
+    <section>
+      <title>Live Statistics</title>
+
+      <para>Clicking the Live Statistics button will take you to the <link
+      linkend="StatisticsScreen">Statistics Screen</link>.</para>
+    </section>
+
+    <section xml:id="EndRaceButton">
+      <title>End Race</title>
+
+      <para>In the event that you need to end the race early you can click the
+      End Race button to end the race immediately. When clicked the race ends
+      right then, racers will not be allowed any more laps.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="StatisticsScreen">
+    <title>Statistics Screen</title>
+
+    <para>The Statistics Screen can either show you graphs and tables of
+    information from previous races or show graphs of the currently running
+    race if <link linkend="DisableLiveGraphing">live graphing</link> is
+    enabled. If a race is currently running you will only be able to change
+    graph types, other functions on this page will not be available.</para>
+
+    <section>
+      <title>Graph Types</title>
+
+      <para>Use the Graph Type pop up menu to select what type of graph you
+      want to see.</para>
+
+      <section>
+        <title>Laps Versus Time</title>
+
+        <para>In the Laps Versus Time graph type the X axis of the graph will
+        represent time and the Y axis will represent the total number of
+        laps.</para>
+      </section>
+
+      <section>
+        <title>Laps Versus Lag</title>
+
+        <para>In the Laps Versus Lag graph the X axis will represent the lap
+        number and the Y axis will represent how far behind the leader you are
+        for that particular lap.</para>
+      </section>
+
+      <section>
+        <title>Time Per Lap</title>
+
+        <para>In the Time Per Lap graph the X axis represents the lap number
+        while the Y axis represents lap time.</para>
+      </section>
+
+      <section>
+        <title>Rank Versus Time</title>
+
+        <para>In the Rank Versus Time graph the X axis represents time while
+        the Y axis represents the rank of the racer.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Selecting Races</title>
+
+      <para>If a race is not currently running you can select previous races
+      to see the results. To do this just click the race name of interest in
+      the top left table on the Statistics Screen. After clicking a record in
+      this table the summary table on the right will update with the
+      information for each racer and the graph will plot the graph type
+      selected.</para>
+    </section>
+
+    <section>
+      <title>Selecting Racers</title>
+
+      <para>To limit the graphed information to a specific racer and see the
+      individual lap information for a racer you must select their name in the
+      summary table on the upper right side of the Statistics Screen. This can
+      only be done if a race is not currently running. When a racer is
+      selected the graph will update with only that racers information and the
+      table on the lower left side of the screen will show the individual lap
+      information for that racer.</para>
+    </section>
+
+    <section>
+      <title>Exporting How Fast Are You OnLine Point Series Data</title>
+
+      <para>The Export HFAY OLPS format button will create a Comma Separated
+      Value file containing information needed for each racer for the <link
+      linkend="HFAYOLPS">How Fast Are You OnLine Point Series</link>. Select a
+      race in from the upper left table and then click the button. A window
+      will pop up a window asking you to save the file to a location. The file
+      will already be named based on the race name that you have selected. You
+      can then send this file to the director of the <link
+      linkend="HFAYOLPS">How Fast Are You OnLine Point Series</link> for your
+      results to be included with the latest event.</para>
+
+      <para><emphasis role="bold">NOTE:</emphasis> The How Fast Are You OnLine
+      Point Series requires that the chassis and motor types be defined for
+      each racer. Please make sure you have entered this information in for
+      each racer participating in the HFAY OLPS before exporting the HFAY OLPS
+      data.</para>
+    </section>
+
+    <section xml:id="GenerateRaceReport">
+      <title>Generate Report</title>
+
+      <para>The Generate Report button will generate a report of the race you
+      have selected in the upper left table. This report will include some
+      <link linkend="RaceConfigScreen">race configuration</link> information,
+      your <link linkend="ClubName">club name</link>, <link
+      linkend="ClubLogo">club logo</link>, date and time of the race, summary
+      of the race results and individual lap times. The results will be saved
+      in a directory named after the <link linkend="RaceName">race name</link>
+      under the reports directory. Within this directory will be a web report,
+      raw XML data and a copy of the logo. After the report is generated by
+      clicking the button the report will then be displayed using your web
+      browser. To learn about customizing the appearance of the race report go
+      to the <link linkend="CustomizeRaceReport">Customize Race Report</link>
+      section.</para>
+    </section>
+
+    <section xml:id="EmailReport">
+      <title>Email Report</title>
+
+      <para>The Email Report option allows you to manually send an email that
+      contains the results for the selected race. This manual generation of
+      the email will follow the rules and use the <link
+      linkend="EmailSettings">Email Settings</link> defined on the <link
+      linkend="GeneralConfigScreen">General Config</link> screen. For example
+      if you have your email settings defined to send an email automatically
+      to Admins Only then even if you click this button to manually send race
+      results it will still only go to Admins.</para>
+    </section>
+
+    <section>
+      <title>Delete Race</title>
+
+      <para>Deleting a race is quite simple. You need to first select the race
+      you wish to delete in the table on the upper left side of the Statistics
+      Screen and then click the Delete Race button. The application will
+      prompt you asking whether or not you are sure you wish to delete the
+      race, click yes to permanently delete the race or cancel not to.</para>
+    </section>
+
+    <section>
+      <title>Delete Racer Results</title>
+
+      <para>To delete an individual racers results from a race you must first
+      select the race in the table on the upper left side of the Statistics
+      Screen. After the race is selected you then can select the racer in the
+      summary table on the upper right of the screen and click Delete Racer
+      Results. Clicking this button will cause a pop up message asking if you
+      are really sure you want to delete the racers results. Clicking yes will
+      delete the results or cancel will do nothing.</para>
+    </section>
+
+    <section>
+      <title>Merge Laps</title>
+
+      <para>In the event that a racer accidentally got counted for 2 laps when
+      they should have gotten one you can merge the laps together after the
+      race has ended. To merge laps first select the race in the upper left
+      table on the Statistics Screen, then select the racer in the summary
+      table on the upper right of the screen. This will cause the laps table
+      on the lower left of the screen to populate with individual lap
+      information. By default the Merge Laps button will merge the time of the
+      lap selected in this table with the time of the lap after it unless you
+      select the last lap. If the last lap is selected it will merge the time
+      with the lap before it.</para>
+
+      <para>Selecting a lap in the lower left hand table and clicking the
+      Merge Laps button will cause a pop up asking you if you are sure you
+      want to merge laps. Click yes to merge the laps. If yes is clicked the
+      laps are merged and the summary information for the race is
+      recalculated. This is needed just in case the ranking or other
+      statistics of the race change as a result of the lap merger.</para>
+    </section>
+
+    <section>
+      <title>Split Lap</title>
+
+      <para>If the lap counter accidentally missed a lap for a race you will
+      need to split a lap into 2 laps so that the racer gets proper credit. To
+      split a lap for a racer after the race has been ran you must select the
+      race in the table on the upper left side of the Statistics Screen and
+      then select the racer in the summary table on the upper right side of
+      the screen. This will populate individual lap information in the lower
+      left table of the screen.</para>
+
+      <para>Select a lap in the lower left hand table and clicking the Slip
+      Lap button will cause a pop up asking you if you are sure you want to
+      split the lap. Click yes to split the lap. If yes is clicked the lap is
+      split and the summary information for the race is recalculated. This is
+      needed just in case the ranking or other statistics of the race change
+      as a result of the lap split.</para>
+    </section>
+
+    <section xml:id="LiveGraphing">
+      <title>Live Graphing</title>
+
+      <para>The Statistics Screen is capable of graphing the information of
+      the currently running race. As long as the <link
+      linkend="DisableLiveGraphing">Live Graphing</link> feature is not
+      disabled the statistics screen will show a live graph of the currently
+      running race. During live graphing most of the features of the
+      Statistics Screen are disabled except for the Graph Type selection. Once
+      the race has completed then all the features of this screen are
+      available again. Live Graphing can cause older machines to perform too
+      slow to properly detect laps so be careful especially if you are running
+      really long races.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="HFAYOLPS">
+    <title>How Fast Are You OnLine Point Series</title>
+
+    <para>The How Fast Are You OnLine Point Series is a worldwide point series
+    that any group can participate in. To compete you need at least 3 people
+    racing, 2 Wide L's of <link xlink:href="http://www.rcptracks.com">RCP
+    track</link> and a suitable lap counter. The results of your race will be
+    combined and ranked with all the other participating clubs around the
+    world.</para>
+
+    <para>Each month you group must run a event which comprises of 2 races on
+    a specific track design, one clockwise and one counter clockwise. Since
+    everyone is running the same layout each month we can then combine the
+    race results of each club together to rank everyone for each race and
+    season. Each season consists of 5 events, each event consists of 2 races
+    and there are 2 seasons a year. You must submit your groups previous race
+    results by the first day of each month. At the end of a season your worst
+    2 races are dropped from your results and you will get your final
+    worldwide ranking for that season.</para>
+
+    <para>Various prizes and awards are available for the top 3 racers, the
+    top under 16 years old racers and clubs. The events are quick and easy to
+    run but the competition for the top ranking is fierce.</para>
+
+    <para>We hope you will participate with our clubs in this unique and fun
+    point series.</para>
+
+    <para>For more information and to register for the series visit the How
+    Fast Are You OnLine Point Series site at <link
+    xlink:href="http://www.howfastareyou.com">www.howfastareyou.com</link>.</para>
+  </chapter>
+
+  <chapter xml:id="Hardware">
+    <title>Hardware</title>
+
+    <para>The software has support for various types of hardware. This chapter
+    details some of the unique things about the supported hardware.</para>
+
+    <section xml:id="COMPort">
+      <title>COM Ports</title>
+
+      <para>To communicate with the various hardware that this software
+      supports COM ports are used. Even though each of the devices plug in via
+      USB the old style COM communication is what is being used. Each of the
+      devices have a chip in them to convert from USB to COM. COM ports appear
+      differently on each Operating System, here are some specific details for
+      each OS.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Windows:</emphasis> In Windows the lap
+          counting hardware will probably be the last device in the COM port
+          list. If that does not work or you want to know for sure what COM
+          port is the correct one you can look in the device manager. To get
+          to the Windows device manager go to your Control Panel then to
+          Administrative Tools and then Computer Management. Within the window
+          that pops up you can look at the device manager. Look under the
+          Ports for a USB port created by the <link
+          linkend="DeviceDriver">FTDI Driver</link>. This will be the COM port
+          you need to use.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Mac OS X:</emphasis> In Mac the device
+          will appear in the list as usb- followed by some numbers. If you
+          have multiple of these devices you figure out which one is correct
+          through the System Profiler. To get to the System Profiler click the
+          Apple logo in the top left of your screen and then select About This
+          Mac. In the window that pops up click the More Info... button, this
+          will launch the System Profiler. In the System Profiler you can
+          click USB under Contents to see the various USB devices connected.
+          Look for a device using the <link linkend="DeviceDriver">FTDI
+          Driver</link>. If no device is found you may need to install the
+          <link linkend="DeviceDriver">driver</link>.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Linux:</emphasis> In Linux the device
+          will most likely be ttyUSB followed by a number. You may have to
+          make a symbolic link to an existing device node such as /dev/ttyS3.
+          How to determine the correct COM port can vary per
+          distribution.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section xml:id="DeviceDriver">
+      <title>Device Drivers</title>
+
+      <para>All the currently supported lap counting hardware uses the same
+      FTDI Driver for communication. If your computer is not recognizing the
+      hardware you plugged in you may need to install a driver. You can
+      download the latest version of the driver for Windows, Mac and Linux
+      from FTDI's website here, <link
+      xlink:href="http://www.ftdichip.com/Drivers/VCP.htm">www.ftdichip.com/Drivers/VCP.htm</link>.</para>
+    </section>
+
+    <section xml:id="CoreSpeedway">
+      <title>Core Speedway</title>
+
+      <para>The Core Speedway lap counter is an <link
+      linkend="RFID">RFID</link> reader based on the TI S6350 module or the
+      Infinity 166 module. This reader uses 13.56MHz ISO15693 <link
+      linkend="RFID">RFID</link> tags for tracking RC cars. Details about the
+      TI S6350 hardware can be found at TI's site here, <link
+      xlink:href="http://www.ti.com/rfid/shtml/prod-readers-RI-STU-TRDC.shtml">www.ti.com/rfid/shtml/prod-readers-RI-STU-TRDC.shtml</link>.
+      The software uses the <link linkend="UID">UID</link> of each <link
+      linkend="RFID">RFID</link> tag to uniquely identify each car.</para>
+
+      <para>The Infinity 166 variety of the Core hardware has been sold
+      oversees most likely because the existing TI S6350 module was not RoHS
+      compliant. The software automatically detects this hardware type and
+      changes the timing for this module. While the TI S6350 based RFID reader
+      can read 100 times a second the Infinity 166 module is slightly slower
+      and can only be polled about 50 times a second.</para>
+    </section>
+
+    <section xml:id="KyoshoIC">
+      <title>Kyosho IC</title>
+
+      <para>The Kyosho IC lap counter is based on the Melexis 90121 <link
+      linkend="RFID">RFID</link> transceiver chip interfaced with an Atmel
+      micro controller. The dNaNo and Kyosho tags utilize the 13.56MHz
+      ISO15693 <link linkend="RFID">RFID</link> standard for communication.
+      The software uses a unique block of data stored on the RFID as the <link
+      linkend="UID">UID</link> to identify each car.</para>
+    </section>
+
+    <section xml:id="I-Lap">
+      <title>I-Lap</title>
+
+      <para>The I-Lap Lap Counter is an IR based lap counting system. Each
+      transponder has a 7 character UID that the software will use. When the
+      I-Lap hardware is used the software will receive the lap times from the
+      lap counter instead of using the internal software timer. When the <link
+      linkend="Accuracy">accuracy setting</link> on the <link
+      linkend="GeneralConfigScreen">General Config</link> screen is set to
+      automatic the software will use 0.001 second resolution lap times as
+      provided by the lap counter.</para>
+
+      <para>As a result of using the hardware lap timer the race pause
+      functionality is disabled. This functionality depends on the software
+      timer but when using I-Lap hardware we utilize the hardware timer so we
+      can have 0.001 second resolution lap times. As a result pausing is not
+      supported with this hardware.</para>
+
+      <para>For more information on the I-Lap hardware visit the RC Lap
+      Counter website at <link
+      xlink:href="???">http://www.rclapcounter.com/</link></para>
+    </section>
+
+    <section xml:id="Robitronic">
+      <title>Robitronic</title>
+
+      <para>The Robitronic Lap Counter is an IR based lap counting system.
+      Each transponder has a 2 byte <link linkend="UID">UID</link> that the
+      software will use. When using the Robitronic Lap Counter the software
+      will use the lap times sent by the lap counter instead of the internal
+      software timer. The Robitronic hardware has a delay when sending
+      detected racer information so you will notice a delay in the software
+      for the detection beep and announcements compared to when you cross
+      under the bridge.</para>
+
+      <para>Since the Robitronic Lap Counter sends lap timing information
+      accurate to 0.001 seconds the automatic <link
+      linkend="Accuracy">accuracy setting</link> defined on the <link
+      linkend="GeneralConfigScreen">General Config</link> screen will use
+      0.001 second resolution if the hardware type is set to
+      Robitronic.</para>
+
+      <para>The ability to pause a race is disabled when using the Robitronic
+      Lap Counter. The pause functionality is dependent on the software lap
+      timer but when utilizing Robitronic hardware we use the hardware time
+      provided by the lap counter to get the 0.001 second resolution. As a
+      result pausing is not supported.</para>
+
+      <para>For more information on the Robitronic Lap Counter hardware visit
+      the Robitronic web site at <link
+      xlink:href="http://www.robitronic.com/">http://www.robitronic.com/</link></para>
+    </section>
+
+    <section xml:id="GKA9805">
+      <title>GKA9805</title>
+
+      <para>The GKA9805 is a UHF RFID reader from Global KeyAccess. This
+      reader uses EPC G2 tags and is therefore not compatible with the tags
+      used for Core or Kyosho RFID lap counters. For more information on this
+      reader visit the website at <link
+      xlink:href="http://www.globalkeyaccess.com/ProductInfo10000713.aspx">http://www.globalkeyaccess.com/ProductInfo10000713.aspx</link></para>
+    </section>
+
+    <section xml:id="Trackmate">
+      <title>Trackmate</title>
+
+      <para>The Trackmate Lap Counter is an IR base lap counting system. Each
+      transponder has a 7 character UID that the software will use. When the
+      Trackmate hardware is used the software will receive the lap times from
+      the lap counter instead of the internal software timer. When the <link
+      linkend="Accuracy">accuracy setting</link> on the <link
+      linkend="GeneralConfigScreen">General Config</link> screen is set to
+      automatic the software will use 0.001 second resolution lap times as
+      provided by the lap counter.</para>
+
+      <para>As a result of using the hardware lap timer the race pause
+      functionality is disabled. This functionality depends on the software
+      timer but when using I-Lap hardware we utilize the hardware timer so we
+      can have 0.001 second resolution lap times. As a result pausing is not
+      supported with this hardware.</para>
+
+      <para>For more information on the Trackmate hardware visit the website
+      at <link
+      xlink:href="http://www.trackmate.com/">http://www.trackmateracing.com/</link></para>
+    </section>
+
+    <section xml:id="AMBrc">
+      <title>AMBrc</title>
+
+      <para>Some AMBrc based systems will be able to be used by this lap
+      counting software. In order to use an AMBrc based system it must attach
+      to the computer through either a serial port or a USB port. When AMBrc
+      is selected as a hardware type the software will receive the lap times
+      from the lap counter instead of the internal software timer. When the
+      <link linkend="Accuracy">accuracy setting</link> on the <link
+      linkend="GeneralConfigScreen">General Config</link> screen is set to
+      automatic the software will use 0.001 second resolution lap times as
+      provided by the lap counter.</para>
+
+      <para>As a result of using the hardware lap timer the race pause
+      functionality is disabled. This functionality depends on the software
+      timer but when using I-Lap hardware we utilize the hardware timer so we
+      can have 0.001 second resolution lap times. As a result pausing is not
+      supported with this hardware.</para>
+    </section>
+
+    <section xml:id="WanhaRacing">
+      <title>WanhaRacing</title>
+
+      <para>The WanhaRacing lap counter is a custom lap counter based on the
+      TRF7960 reader from TI. This hardware is currently under development by
+      another group and support is experimental.</para>
+    </section>
+
+    <section xml:id="UID">
+      <title>UID</title>
+
+      <para>UID stands for Unique IDentifier. Each racer must have a UID. This
+      is achieved in various ways depending on the hardware.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Keyboard:</emphasis> For the <link
+          linkend="Keyboard">Keyboard</link> when <link
+          linkend="CreateNewRacer">Creating a New Racer</link> you must assign
+          a unique key to each racer, for example 1 or j. Any key can be used
+          except for r,s,e and p which are reserved for <link
+          linkend="KeyboardShortcuts">Keyboard Shortcuts</link>.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Core Speedway:</emphasis> For the <link
+          linkend="CoreSpeedway">Core Speedway</link> hardware the UID is
+          based on the UID of the RFID in the car. When <link
+          linkend="CreateNewRacer">Creating a New Racer</link> the scan button
+          will pick up the <link linkend="RFID">RFID's</link> UID.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Kyosho IC:</emphasis> With the Kyosho IC
+          lap counter the UID of the <link linkend="RFID">RFID</link> is not
+          used. Instead each <link linkend="RFID">RFID</link> must have a
+          unique block of data on block 1 of the memory on the <link
+          linkend="RFID">RFID</link>. Kyosho tags and dNaNo's already have a
+          unique block of data but generic tags will not. Generic <link
+          linkend="RFID">RFID</link> tags will have to be initialized to work
+          with the Kyosho IC lap counter. Refer to the <link
+          linkend="KyoshoGenericTags">Using Generic Tags with the Kyosho IC
+          Lap Counter</link> section of the <link
+          linkend="AdvancedTopics">Advanced Topics</link> chapter for further
+          information.</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis role="bold">I-Lap:</emphasis> The I-Lap transponders
+          provide a 7 character transponder id that the software detects and
+          will use as the UID.</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis role="bold">Robitronic:</emphasis> The Robitronic
+          transponders use a 2 byte transponder id that the software detects
+          and uses as the UID. With only 2 bytes used it is possible there
+          will be duplicate id's as there can only be a maximum of 65536 id's
+          created. So will possible it is fairly unlikely you will encounter a
+          duplicate transponder id.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section xml:id="RFID">
+      <title>RFID Tags</title>
+
+      <para>RFID tags are a small integrated circuit with a larger antenna
+      loop for picking up the signal from the RFID reader (lap counter). The
+      13.56MHz ISO15693 RFID tags used by this software are a passive tag,
+      meaning they do not need a power supply to operate, they pick up their
+      power from the RF field generated by the lap counter. Each tag has a
+      <link linkend="UID">UID</link> along with a small amount of memory that
+      can be used for storing data.</para>
+
+      <para>This software enables the use of generic TI RFID tags with the lap
+      counting hardware. For the Core Speedway lap counter nothing more needs
+      to be done to use generic tags. With the Kyosho IC lap counter refer to
+      the <link linkend="KyoshoGenericTags">Using Generic Tags with the Kyosho
+      IC Lap Counter</link> section of the <link
+      linkend="AdvancedTopics">Advanced Topics</link> chapter for further
+      information.</para>
+
+      <para>Information about recommended generic RFID tags to use with the
+      software can be found on the Flip Side Racing website here, <link
+      xlink:href="http://www.flipsideracing.org">www.flipsideracing.org</link>.</para>
+    </section>
+
+    <section xml:id="RelayBoard">
+      <title>Relay Board</title>
+
+      <para>The software has the ability to use DLP Designs DLP-IOR4 USB relay
+      board for controlling a stop/start light tree. This board is capable of
+      handling up to 60W light bulbs. The relay board itself does not have any
+      lights, it is your responsibility to build and wire the light
+      tree.</para>
+
+      <para>The application will control the relay board, during the starting
+      race countdown the relay board can will have Relay 4 active until 2
+      seconds left in the countdown, at 2 seconds it will switch Relay 4 off
+      and Relay 3 on, at 1 second it will switch Relay 3 off and Relay 2 on
+      and finally at the start of the race it will switch Relay 2 off and
+      Relay 1 on. When the race time limit or lap limit is reached race Relay
+      1 will turn off and Relay 2 will turn on. When everyone has finished
+      their final laps or timed out Relay 2 will turn off and Relay 4 will
+      turn on. You can connect lights to these relays to have a start/stop
+      light for races.</para>
+
+      <para>Information about the DLP Designs DLP-IOR4 relay board and
+      locations to purchase board from can be found here, <link
+      xlink:href="http://www.dlpdesign.com/usb/ior4.shtml">www.dlpdesign.com/usb/ior4.shtml</link>.</para>
+    </section>
+
+    <section xml:id="Keyboard">
+      <title>Keyboard</title>
+
+      <para>If you do not have lap counting hardware to use you can instead
+      use the keyboard to register laps for racers. While it is not as
+      accurate it can still provide fun racing with a group of friends. Each
+      racer must have a unique key assigned when <link
+      linkend="CreateNewRacer">Creating the Racer</link>, the key does not
+      have to be a number, it can be any key on the keyboard except the
+      letters r,s,e and p which are reserved for <link
+      linkend="KeyboardShortcuts">Keyboard Shortcuts</link>.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="Theme">
+    <title>Theme</title>
+
+    <para>Changing some aspects of the appearance and sounds that the software
+    has is possible. To manage a theme you must click the Manage Themes button
+    on the General Config Screen. This chapter details some of the options
+    that can be changed.</para>
+
+    <section>
+      <title>Managing Themes</title>
+
+      <para>Upon clicking the <link linkend="ThemeButton">Manage Themes
+      Button</link> on the <link linkend="GeneralConfigScreen">General Config
+      Screen</link> a window will pop up with the controls for managing
+      themes. The top of this window contains the basic controls to select,
+      create, delete, import, export and save themes. Below these controls is
+      a tab panel, each tab contains various theme items that can be modified.
+      After any changes have been made to a theme you must click the Save
+      button for them to be saved. If the save button is not clicked any
+      changes will be lost.</para>
+
+      <section>
+        <title>Select Theme to Manage:</title>
+
+        <para>This popup menu provides 2 functions. The first is the ability
+        to select an existing theme to manage. The second is the ability to
+        type in a new name of a theme to create.</para>
+      </section>
+
+      <section>
+        <title>Create</title>
+
+        <para>To create a new theme first type in a unique theme name in the
+        popup menu then click the Create button. This will create a new theme
+        with default theme settings. You can then select the theme to manage
+        it.</para>
+      </section>
+
+      <section>
+        <title>Delete</title>
+
+        <para>To delete a theme select the theme to manage from the popup menu
+        and then click the Delete button. Deletes are permanent, after a theme
+        has been deleted there is no way to recover it.</para>
+      </section>
+
+      <section>
+        <title>Import</title>
+
+        <para>The import and export functions provide a way to share themes or
+        to create backups of your themes. To import a theme just click the
+        Import button. A window will pop up asking you to select the theme
+        file to import. Selecting a valid file will result in the new theme
+        being inserted into the database. If the imported theme has the same
+        name as an existing theme you will be prompted to decide what to do.
+        You can overwrite the existing theme with the imported theme or if you
+        choose not to overwrite the theme the program will add a number to the
+        end of the theme name.</para>
+      </section>
+
+      <section>
+        <title>Export</title>
+
+        <para>The export function provides a way to save a theme to be shared
+        with people or to provide a backup for yourself. To export a theme
+        just select the theme from the popup menu and click the Export button.
+        A window will pop up allowing you to select where to save the file
+        to.</para>
+      </section>
+
+      <section>
+        <title>Save</title>
+
+        <para>Any changes to a theme that you wish to keep must be saved. To
+        save a change make sure you have a theme selected, make your changes
+        and then click the Save button.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Customizing the Theme</title>
+
+      <para>After creating or selecting a theme to manage you can customize
+      the various items of a theme using the tab panel on the theme manager
+      window. This tab panel has 4 tabs, Images, Buttons, Colors and Sounds.
+      Select the appropriate tab for what you want to change on your
+      theme.</para>
+
+      <section>
+        <title>Images</title>
+
+        <para>This tab panel is used to control the various standard images
+        used within the program.</para>
+
+        <section>
+          <title>Background</title>
+
+          <para>Clicking the browse button or clicking the existing image
+          under the Background heading will allow you to select a new
+          background image for the program.</para>
+
+          <para>The default background included is 1920x1200 in size and set
+          to not scale. For screens smaller than this resolution the
+          application will only display the portion of the background equal to
+          the window size. For screens larger than this the remaining window
+          space will be filled with the default background color which can be
+          selected on the Colors tab.</para>
+        </section>
+
+        <section>
+          <title>Scale Background</title>
+
+          <para>By enabling this feature the program will stretch or shrink
+          your background image to fit the window. By default this setting is
+          off. With the setting off only the portion of the background equal
+          to your window size will be displayed.</para>
+        </section>
+
+        <section>
+          <title>Main Logo</title>
+
+          <para>To change the Main Logo you need 2 images. One image is the
+          logo itself while the other image is a mask. The mask is a black and
+          white image that tells the program what part of the logo image
+          should be displayed and what part of the logo should be transparent.
+          When you click the browse button you will be prompted to select both
+          of theses images. First you will be prompted to select the logo
+          image, after one has been selected you will be prompted a second
+          time to select the mask. The images used for the logo must not
+          larger than 522x190. Anything larger than that will be cut off from
+          the display.</para>
+        </section>
+
+        <section>
+          <title>Countdown Images</title>
+
+          <para>The Countdown Images are displayed on the <link
+          linkend="RaceScreen">Race Screen</link> during the initial countdown
+          before a race starts. The number after the image name indicates at
+          which second of the countdown the image displays. For example
+          Countdown 0 is displayed when 0 seconds remain in the countdown
+          which is when the race starts, Countdown 1 is displayed when 1
+          second remains in the countdown and Countdown 6+ is displayed when 6
+          or more seconds remain in the countdown. The image used for
+          countdowns must not be greater than 250x108 in size. Anything larger
+          than that will be cut off from the display.</para>
+        </section>
+
+        <section>
+          <title>Empty Racer</title>
+
+          <para>The Empty Racer image is used on the race screen for slots
+          that do not currently have a racer. To change this graphic you need
+          two images, the empty racer image and a mask image. The mask image
+          tells the program what part of the empty racer image to display and
+          what part to make transparent. When you click the browse button you
+          will be prompted to select these two images, first the program will
+          prompt for the empty racer image and then it will prompt you to
+          select the mask image.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Buttons</title>
+
+        <para>On this tab panel you can change the appearance of some of the
+        buttons within the program.</para>
+
+        <section>
+          <title>Navigation Buttons</title>
+
+          <para>To change Navigation Buttons you must have 3 images. You will
+          need the button image, the button image mask file and a mouse over
+          image. The button image is the default image displayed and the mouse
+          over image is what is displayed when the mouse is over the button.
+          The mask file is a black and white file that tells the program what
+          parts of the button image are to be displayed and what parts are
+          transparent. When you click the Browse button you will be prompted
+          to select these three images. The program will first prompt you for
+          the button image, then for the mask image and finally for the mouse
+          over image.</para>
+        </section>
+
+        <section>
+          <title>Documentation Buttons</title>
+
+          <para>The Documentation Buttons are the 4 buttons on the Main Screen
+          used to navigate to various parts of the documentation. Two images
+          are required for these buttons, the button image and a mask file.
+          The mask file tells the program what parts of the button to display
+          and what parts are transparent. When you click the Browse button you
+          will be prompted to select two images. The program will first prompt
+          you for the button image and then for the mask image.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Colors</title>
+
+        <para>The list box on this screen is used to control the various
+        colors within the program. To change a color just click the text of
+        what you want to change. A color selection window will pop up allowing
+        you to customize that particular color.</para>
+      </section>
+
+      <section xml:id="SoundEffects">
+        <title>Sounds</title>
+
+        <para>While most of the application uses <link linkend="TTS">Text To
+        Speech</link> for sound there are 4 sound effects that can be
+        customized. The Sounds tab allows you to select new sounds and to play
+        the sounds within a theme.</para>
+      </section>
+    </section>
+
+    <section xml:id="CustomizeRaceReport">
+      <title>Customizing the Race Report</title>
+
+      <para>The logo and club name on the <link
+      linkend="GenerateRaceReport">Race Report</link> is controlled by the
+      <link linkend="ClubInfo">Club Info</link> settings on the <link
+      linkend="GeneralConfigScreen">General Config</link> Screen.</para>
+
+      <para>The overall appearance of the <link
+      linkend="GenerateRaceReport">Race Report</link> is controlled by the
+      race.xsl file located in the reports directory. If you are familiar with
+      HTML and CSS and you change the colors, appearance and layout of new
+      reports by modifying this file. It is a text file so any text editor can
+      be used. The race.xsl file only applies to new reports, if it is changed
+      existing reports will have to be <link
+      linkend="GenerateRaceReport">regenerated</link>.</para>
+    </section>
+
+    <section>
+      <title>Customizing the Racer Inventory Report</title>
+
+      <para>The logo and club name on the <link
+      linkend="GenerateRacerInventoryReport">Racer Inventory Report</link> is
+      controlled by the <link linkend="ClubInfo">Club Info</link> settings on
+      the <link linkend="GeneralConfigScreen">General Config</link>
+      Screen.</para>
+
+      <para>The overall appearance of the <link
+      linkend="GenerateRacerInventoryReport">Racer Inventor Report</link> is
+      controlled by the racerinventory.xsl file located in the reports
+      directory. If you are familiar with HTML and CSS and you change the
+      colors, appearance and layout of new reports by modifying this file. It
+      is a text file so any text editor can be used. The racerinventory.xsl
+      file only applies to new reports, if it is changed existing reports will
+      have to be <link
+      linkend="GenerateRacerInventoryReport">regenerated</link>.</para>
+    </section>
+
+    <section>
+      <title>Changing the Logo on the Splash Screen</title>
+
+      <para>When the application first launches there is a splash screen that
+      appears with the Flip Side Racing logo before the main window pops up.
+      This logo is loaded from the FlipSideRacingLogo.jpg file in the theme
+      directory. Overwriting this file with your own logo will cause it to be
+      displayed on the splash screen when the application launches. The image
+      should be 520x190 or smaller in size. If it is larger than that the
+      image will be cut off.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="AdvancedTopics">
+    <title>Advanced Topics</title>
+
+    <para>This chapter has sections detailing some of the more advanced things
+    that can be done or changed with the program.</para>
+
+    <section xml:id="RaceCarInfoPopUp">
+      <title>Adding Options to the Edit Racer Screen</title>
+
+      <para>When creating or editing racers on the <link
+      linkend="EditRacersScreen">Edit Racers</link> Screen the pop up menus
+      under Race Car Specific Information can be changed. These options are
+      controlled by various parts of the program. The different spots used to
+      change the options are listed below.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Scale, Chassis, Class and
+          Motor:</emphasis> These pop up menus are controlled by the
+          raceparts.xml file. You can add or remove options from these menus
+          by editing the raceparts.xml file with a text editor. Please make
+          sure to keep the file properly formatted and do not remove the
+          &lt;&gt;none&lt;&gt; entries for each option.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Make and Model:</emphasis> The make and
+          model options are controlled by the database. To add options either
+          go to the <link linkend="EditRacersScreen">Edit Racers</link> Screen
+          and type text into the Make and Model fields and hit enter or you
+          use the <link linkend="EditMakeModel">Edit Make/Model</link> utility
+          located on the <link linkend="GeneralConfigScreen">General
+          Config</link> Screen to add or delete makes and models.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Crystal:</emphasis> The options
+          available for the Crystal pop up menu is controlled by the
+          crystals.xml file. You can add and remove options for the menu by
+          modifying this file with a text editor. The Crystal pop up menu is
+          also a combo menu, instead of choosing an option in the menu you can
+          type text for whatever crystal you are using. Items entered through
+          the menu are not saved to the menu though, you must edit the
+          crystals.xml file for it to be a menu option.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section xml:id="TTS">
+      <title>Text to Speech</title>
+
+      <para>The software uses your Operating Systems built in Text To Speech
+      capabilities to announce various things during a race such as time
+      remaining, ranks, best laps and the count down.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>MAC OS X: On a Mac the Text To Speech settings are located in
+          the System Preferences in the System heading under the Speech
+          option. Within this preference pane you can change things such as
+          the voice used and speed of the speaking rate.</para>
+        </listitem>
+
+        <listitem>
+          <para>Windows: In Windows to configure Text To Speech settings you
+          must go to your control panel and then go to the Speech applet.
+          Within this applet you can choose different voices and change the
+          speed of the speaking rate.</para>
+        </listitem>
+
+        <listitem>
+          <para>Linux: For Linux the software is using kttsd for the Text To
+          Speech. You must install and configure kttsmgr management utility
+          and an appropriate Text To Speech engine for Text To Speech to
+          operate in Linux. Festival is a common TTS engine used in Linux and
+          will work with kttsmgr.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>The default voices in some versions of the various operating
+      systems do not sound very good. You can get third party voices that will
+      work and sound much better. Here are a few options.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Microsoft Mary and Mike English voices for free can be
+          downloaded here, <link
+          xlink:href="http://www.imptec.com/SpeechXP.exe">www.imptec.com/SpeechXP.exe</link>.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para>A list of various third party voices that you must purchase
+          can be found here, <link
+          xlink:href="http://www.microsoft.com/speech/evaluation/thirdparty/engines.mspx">www.microsoft.com/speech/evaluation/thirdparty/engines.mspx</link>.
+          Some of these companies such as AT&amp;T and Cepstral have voices
+          that will also work in Mac and Linux.</para>
+        </listitem>
+      </itemizedlist>
+
+      <itemizedlist>
+        <listitem>
+          <para>Free French and German voices for Windows can be downloaded
+          from here, <link
+          xlink:href="http://www.microsoft.com/reader/developers/downloads/tts.aspx">www.microsoft.com/reader/developers/downloads/tts.aspx</link>.
+          You must install the Microsoft Reader from here, <link
+          xlink:href="http://www.microsoft.com/reader/downloads/pc.aspx">www.microsoft.com/reader/downloads/pc.aspx</link>
+          before installing the French and German voices.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Various clubs have been happy with the sound of the third party
+      AT&amp;T voices.</para>
+    </section>
+
+    <section xml:id="Translations">
+      <title>Translations</title>
+
+      <para>It is possible to translate the speech in the program to another
+      language. By default the americanenglish.xml file located in the
+      translations directory is used. The file is well documented and can be
+      edited with a text editor to create a new translation. After editing the
+      file save it with a new name reflecting the language that the text was
+      translated to. After creating a new translation you will have to select
+      the translation through the <link linkend="SpeechFile">Speech
+      File</link> option on the <link linkend="GeneralConfigScreen">General
+      Config</link> Screen. If you are translating the speech to a different
+      language you will need to change your <link xlink:href="TTS">Text To
+      Speech</link> settings to a language other than English.</para>
+
+      <para>Two translations are already included with the software, German
+      and French. They are also located in the translations directory.</para>
+    </section>
+
+    <section>
+      <title>Change Racer Text Color</title>
+
+      <para>To change the racer text color used on the <link
+      linkend="RaceScreen">Race</link> or <link
+      linkend="StatisticsScreen">Statistics</link> Screens refer to the <link
+      linkend="ChangeTextColor">Change Text Color</link> section of the <link
+      linkend="GeneralConfigScreen">General Config</link> chapter.</para>
+    </section>
+
+    <section>
+      <title>Graph Line Colors</title>
+
+      <para>To change the racer graph line colors used on the <link
+      linkend="StatisticsScreen">Statistics</link> Screen refer to the <link
+      linkend="ChangeTextColor">Change Text Color</link> section of the <link
+      linkend="GeneralConfigScreen">General Config</link> chapter.</para>
+    </section>
+
+    <section>
+      <title>Increase the Total Number of Racers Per Race</title>
+
+      <para>The total number of racers allowed per race is configurable. Refer
+      to the <link linkend="GUISettings">GUI Settings</link> section located
+      on the <link linkend="GeneralConfigScreen">General Config</link> Screen
+      to modify this limit.</para>
+    </section>
+
+    <section>
+      <title>Upgrading the Software</title>
+
+      <para>This software is under active development, it is recommended to
+      download the latest copy of the software from <link
+      xlink:href="http://www.flipsideracing.org">www.flipsideracing.org</link>.
+      While there is no automated process for upgrading to the latest version
+      of the software upgrading is fairly simple. After downloading the latest
+      version of the software you can copy the FlipSideDB and preferences.xml
+      file from your old copy of the software to the new. Unless you have
+      manually edited other files such as the xml files used by the software
+      those two files are all that are needed from the previous
+      version.</para>
+    </section>
+
+    <section>
+      <title>Rename a Race</title>
+
+      <para>Currently the software does not provide a way to rename a race
+      after it has been ran. But since the race data is stored in an SQLite
+      <link linkend="Database">database</link> you can use a SQLite database
+      management tool to modify any information in the <link
+      linkend="Database">database</link> directly. If you do modify the
+      database directly it is recommended that you make a backup copy
+      first.</para>
+    </section>
+
+    <section xml:id="Database">
+      <title>Database Information</title>
+
+      <para>All of the racer and race information is stored in an SQLite
+      database. This database is located in the program directory and named
+      FlipSideDB. This file must exist for the software to operate.</para>
+    </section>
+
+    <section>
+      <title>Using a Secondary Lap Counter</title>
+
+      <para>Two lap counters can be used at once with this software. This
+      allows you the flexibility to do rally or drag style timing or use 2 lap
+      counters to cover a wider track. To configure a secondary lap counter
+      refer to the <link linkend="SecondaryCOMDevice">Secondary COM Device
+      Selection</link> section of the <link
+      linkend="GeneralConfigScreen">General Config</link> Screen.</para>
+    </section>
+
+    <section xml:id="KeyboardShortcuts">
+      <title>Keyboard Shortcuts</title>
+
+      <para>There are a few keyboard shortcuts available to perform actions
+      within the software.</para>
+
+      <para>If you want the software to announce the current ranks of all the
+      racers hit the "r" key on the keyboard. You can also start a race by
+      hitting "s", end a race by hitting "e", or pause a race by hitting
+      "p".</para>
+    </section>
+
+    <section xml:id="KyoshoGenericTags">
+      <title>Using Generic RFID Tags with the Kyosho IC Lap Counter</title>
+
+      <para>Generic <link linkend="RFID">RFID</link> tags must be initialized
+      before they can work with the Kyosho IC lap counter. A separate program
+      called Kyosho RFID Tag Init has been created to initialize generic tags
+      and can be downloaded from the <link
+      xlink:href="http://www.flipsideracing.org">www.flipsideracing.org</link>
+      website.</para>
+
+      <para><emphasis role="bold">WARNING: Do not initialize Kyosho tags such
+      as those on the dNaNo, if you do they will probably no longer work with
+      the Kyosho software. Only generic RFID tags need
+      initialized.</emphasis></para>
+    </section>
+
+    <section>
+      <title>Troubleshooting Errors</title>
+
+      <para>In the event that you are encountering a bug please contact us for
+      support. If the problem is resulting in an error message or crash the
+      program will attempt to send the information about the error
+      automatically. If it can not send the information it will create a file
+      called dump.txt that contains details about the error. Please send us
+      this information along with any details you can provide about what
+      occurred to help us with troubleshooting the problem.</para>
+    </section>
+  </chapter>
+
+  <chapter xml:id="Support">
+    <title>Support</title>
+
+    <para>If you need additional help with this software you can either
+    contact us directly by using the Contact Link on the main website at <link
+    xlink:href="http://www.flipsideracing.org">www.flipsideracing.org</link>
+    or visit the forum hosted by <link
+    xlink:href="http://mini-zracer.com/forums/forumdisplay.php?f=150">www.mini-zracer.com</link>.
+    You will need to register in order to access the support forum.</para>
+
+    <para>We welcome any constructive feedback.</para>
+  </chapter>
+</book>

@@ -1,0 +1,306 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>4.3. Race Settings</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot_9469"><link rel="home" href="index.html" title="Flip Side Racing Software"><link rel="up" href="ch04.html" title="Chapter 4. Race Config Screen"><link rel="prev" href="ch04s02.html" title="4.2. Race Profiles"><link rel="next" href="ch04s04.html" title="4.4. Start Race Button"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.3. Race Settings</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch04s02.html">Prev</a> </td><th width="60%" align="center">Chapter 4. Race Config Screen</th><td width="20%" align="right"> <a accesskey="n" href="ch04s04.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp215296"></a>4.3. Race Settings</h2></div></div></div>
+      
+
+      <p>Below the Race Profiles section the individual race settings are
+      listed. If race profiles are not being used these settings will default
+      to the last settings used when the application was closed. If a race
+      profile is not used the settings are stored in preferences.xml file
+      otherwise they are stored in the <a class="link" href="ch10s09.html" title="10.9. Database Information">database</a>.</p>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="RaceType"></a>4.3.1. Race Type</h3></div></div></div>
+        
+
+        <p>The Race Type selected changes how the race is tracked, by time
+        or by number of laps. There are 4 race types currently
+        supported.</p>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp219152"></a>4.3.1.1. Timed Race</h4></div></div></div>
+          
+
+          <p>For a timed race the race will end after the time limit has
+          been reached. When the time limit is reached all racers must
+          complete their final lap before the time out. When all racers have
+          completed their final lap or timed out the race will end.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp220592"></a>4.3.1.2. Lap Race</h4></div></div></div>
+          
+
+          <p>In a lap race the race will end after the first person reaches
+          the lap limit. After the lap limit has been reached all other racer
+          must complete their final lap before the time out. When all racers
+          have completed their final lap or timed out the race will
+          end.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp222048"></a>4.3.1.3. Lap and Timed Race</h4></div></div></div>
+          
+
+          <p>With a lap and timed race the race will end after either the
+          lap limit or the time limit is reached. When either the lap or time
+          limit has been reached all remaining racers must complete their
+          final lap before the time out. When all racers have completed their
+          final lap or timed out the race will end.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp223552"></a>4.3.1.4. Staggered Time Race</h4></div></div></div>
+          
+
+          <p>A staggered race is similar to a timed race except each racer
+          gets their own clock based on the time limit setting. Each
+          individual racers clock will not start until after the first time
+          they cross the lap counter. The race will end after the final racers
+          time limit is reached and they have completed their final lap or
+          timed out.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp225120"></a>4.3.1.5. Free Play Race</h4></div></div></div>
+          
+
+          <p>A Free Play race type is intended for open track time. It is
+          not really a true race type, no results are stored. It has the
+          following characteristics:</p>
+
+          <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+              <p>The race does not end automatically, no lap limit or time
+              limit. You must manually end it by pressing the <a class="link" href="ch05s04.html" title="5.4. End Race">End Race Button</a> on the <a class="link" href="ch05.html" title="Chapter 5. Race Screen">Race Screen</a>.</p>
+            </li><li class="listitem">
+              <p>Results are not stored to the database after the session
+              is ended.</p>
+            </li><li class="listitem">
+              <p>Racers are removed from the race screen if they have not
+              gotten a lap within the <a class="link" href="ch04s03.html#TimeOut" title="4.3.8. Time Out">Time Out</a>
+              value on the Race Config Screen.</p>
+            </li><li class="listitem">
+              <p>Racers can join the session at any time, the first time
+              they cross the lap counter is considered their start time for
+              calculating lap times.</p>
+            </li><li class="listitem">
+              <p>Racers can rejoin a session after they have been timed
+              out, all information has been reset for them including lap
+              counts, times and best lap.</p>
+            </li><li class="listitem">
+              <p>No rank or time announcements will be made.</p>
+            </li><li class="listitem">
+              <p>Overall and personal best lap times will be
+              announced.</p>
+            </li><li class="listitem">
+              <p>On the <a class="link" href="ch05.html" title="Chapter 5. Race Screen">Race Screen</a> the
+              pace column will show the average lap time.</p>
+            </li><li class="listitem">
+              <p>Ranking on <a class="link" href="ch05.html" title="Chapter 5. Race Screen">Race Screen</a>
+              is configurable.</p>
+            </li></ul></div>
+
+          <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+              <p>Racers can be manually deleted during the race by double
+              clicking on their name or picture.</p>
+            </li></ul></div>
+        </div>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp239008"></a>4.3.2. Number of Laps</h3></div></div></div>
+        
+
+        <p>This setting defines the lap limit for a Lap or Lap and Time
+        based races. You can type values into the field or use the +/- buttons
+        to increment and decrement the value by 1 lap.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp240416"></a>4.3.3. Time Limit</h3></div></div></div>
+        
+
+        <p>For Timed, Lap and Timed and Staggered Time based races the Time
+        Limit value defines how long the race will run. The value in this
+        field is based on minutes. You can type values into the field or use
+        the +/- buttons to increment and decrement the value by 1
+        minute.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp241952"></a>4.3.4. Minimum Lap Time</h3></div></div></div>
+        
+
+        <p>The Minimum Lap Time defines the quickest lap time that will be
+        accepted by the software. If a lap is less than this value it will not
+        be recorded. You can enter a value into the field or use the +/-
+        buttons to increment and decrement the value by 1 second.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp243488"></a>4.3.5. Round Type</h3></div></div></div>
+        
+
+        <p>The Round Type drop down defines whether this race is a
+        Practice, Heat, Qualifier or Main. This information is used for the
+        summary of the race, the race auto naming field and will show up in
+        the race report.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="CountDownTime"></a>4.3.6. Starting Count Down</h3></div></div></div>
+        
+
+        <p>When a race is started the count down timer will begin. The
+        Count Down Time defines how long the count down before a race will be.
+        If audio is enabled the software will start to announce count down
+        seconds remaining at 5 seconds. If the Count Down Time is set to 8
+        seconds or longer the software will announce "Prepare to Race" and
+        then count down.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp246576"></a>4.3.7. Ending Count Down</h3></div></div></div>
+        
+
+        <p>At the specified number of seconds the program will count down
+        the time remaining. For example if set to 5 seconds when only 5
+        seconds are left the program will count down 5, 4, 3, 2, 1 and the
+        race will end. If this is set to 0 it will not count down.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="TimeOut"></a>4.3.8. Time Out</h3></div></div></div>
+        
+
+        <p>When the race time or lap limits have been reached the time out
+        value will be used to end the race for racers that have not completed
+        their final lap. If it takes the racer longer than the time out value
+        to finish the final lap their race will be ended.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp249584"></a>4.3.9. Count Down Type</h3></div></div></div>
+        
+
+        <p>Select the style of count down to use for the races. A
+        traditional count down will display the count down time on the screen
+        and when the count down reaches 5 seconds it will start saying the
+        seconds remaining in the count down. When the countdown reaches 0 the
+        starting horn sound will play and the race starts. In an F1 style
+        count down instead of displaying the seconds in the count down the
+        program will beep the specified number of times set as the starting
+        count down number. When it reaches the final beep the program will set
+        a random delay between 1 and 10 seconds before playing the starting
+        horn and starting the race.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp251552"></a>4.3.10. Ending Horn</h3></div></div></div>
+        
+
+        <p>This setting defines whether or not the ending horn sound effect
+        plays when a race is complete. The sound effect will be triggered in a
+        timed race when the time limit is reached. In a lap race it will be
+        triggered when the first person reaches the lap limit.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp253088"></a>4.3.11. Lap Indication</h3></div></div></div>
+        
+
+        <p>By default when a lap is detected the software will beep but
+        there are other interesting options available.</p>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp254400"></a>4.3.11.1. Beep</h4></div></div></div>
+          
+
+          <p>The default lap indication setting is the beep, this will play
+          a beep sounding wav file.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp255552"></a>4.3.11.2. Lap Time</h4></div></div></div>
+          
+
+          <p>The Lap Indication can be changed to announce the Lap Time
+          using this setting. Each time a new lap is detected the software
+          will say the time. For example is a racer just got a lap time of 7.8
+          seconds then the software will announce 7.8 seconds.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp257056"></a>4.3.11.3. Lap Difference</h4></div></div></div>
+          
+
+          <p>The Lap Different Lap Indication will announce the different
+          between a racers best lap time and their current lap time. If it is
+          a new best lap for that racer the software will announce the new
+          best lap, otherwise it will just be the difference in time between
+          their current time and their best lap time. For example if a racer
+          has a best lap of 7.6 seconds and they just got a new lap of 7.8
+          seconds the software will announce .2 seconds.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp258208"></a>4.3.11.4. Lap Time 1 Decimal, Lap Time 2 Decimals, Lap Difference 1
+          Decimal and Lap Difference 2 Decimals</h4></div></div></div>
+          
+
+          <p>These options are variations of the Lap Time and Lap
+          Difference options that will round the announced time to the
+          specified decimal place. For example if you select Lap Time 1
+          Decimal and get a lap time of 7.123 the software will announce the
+          lap time as 7.1.</p>
+        </div>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp260384"></a>4.3.12. Enable Rank Announcements</h3></div></div></div>
+        
+
+        <p>If the Enable Rank Announcements setting is enabled then
+        periodically during a race the current ranks of each racer will be
+        announced. Set the Rank Announcement Interval to define when the
+        announcements occur. You can also hit the "r" key at any time and the
+        software will announce the current ranks.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp261920"></a>4.3.13. Rank Announcement Interval</h3></div></div></div>
+        
+
+        <p>The Rank Announcement Interval defines how often the current
+        ranks of each racer will be announced if the Enable Rank Announcements
+        feature is enabled. This value sets the number of minutes between rank
+        announcements. You can also hit the "r" key at any time and the
+        software will announce the current ranks.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp263456"></a>4.3.14. Rank Method</h3></div></div></div>
+        
+
+        <p>The Rank Method option allows you to change how racers are
+        ranked during a race.</p>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp264640"></a>4.3.14.1. Total Laps</h4></div></div></div>
+          
+
+          <p>This ranking method ranks by the total laps followed by the
+          time they were completed in.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp265904"></a>4.3.14.2. Best Lap</h4></div></div></div>
+          
+
+          <p>This ranking method ranks by the best lap times. This is
+          useful for qualifying rounds.</p>
+        </div>
+
+        <div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp267168"></a>4.3.14.3. Average Lap</h4></div></div></div>
+          
+
+          <p>This ranking method ranks by the average lap time. This method
+          of ranking is useful for the free play race mode or staggered start
+          races.</p>
+        </div>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp268480"></a>4.3.15. Rank Change Speech</h3></div></div></div>
+        
+
+        <p>This setting configures the speech settings for announcing rank
+        changes during a race. If it is set to Lead Change then the program
+        will only announce when someone takes the lead. If it is set to Any
+        Change then the program will announce a rank change any time someone
+        moves up in rank.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp269984"></a>4.3.16. Best Lap Speech</h3></div></div></div>
+        
+
+        <p>This option allows you to change when best laps are announced.
+        You can choose between none, personal or overall. When set to personal
+        each races individual best lap time will be announced when it occurs
+        during the race. If set to overall individual racers best lap times
+        will not be announced, only the best lap overall will be announced
+        during the race.</p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch04s02.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch04.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch04s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4.2. Race Profiles </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 4.4. Start Race Button</td></tr></table></div></body></html>

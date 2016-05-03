@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a comment field for documentation -->
+<!-- This file defines what is spoken by the program, please make sure to include all entries -->
+<!-- In line comments create an error, leave all comments above the translation entry -->
+<!-- seconds, hours, minutes, hour are all generic and used to assemble other sentences -->
+<!-- countdownone, two, three, four, five are used during the inital race countdown -->
+<!-- bestlap, Individual best lap text spoken is assembled in this order, name + "'s best lap" + lap time + seconds -->
+<!-- Seconds text is defined elsewhere -->
+<!-- fastestlap, Overall fastest lap text spoken is assembled in this order, "Fastest lap by" + name + lap time + seconds -->
+<!-- takesthelead, Takes the lead text, assembled in the order name + "takes the lead" -->
+<!-- timelimitreached, is used when the time limit is reached -->
+<!-- finished, Individual racer finished text, used in lap races, assembled in the order name + "finished" -->
+<!-- racecomplete, is used when all racers have finished the race, before announcing the ranking -->
+<!-- secondsremaining through hoursandremaining are used for constructing the time remaining speech text -->
+<!-- examples less than 1 minute remaining are assembled in the order number + "seconds remaining" -->
+<!-- hourremaining, text spoken when 1 hour remaining -->
+<!-- hourandremaining, text spoken when "1 hour and " + number + "minutes remaining" -->
+<!-- this uses the existing minutesremaining definition -->
+<!-- hoursremaining, text spoken when multiple hours are remaining formated as number + "hours remaining" -->
+<!-- hoursandremaining, text spoken when multiple hours and minutes are remaining, formatted as number + "hours remaining and" + number + "minutes remaining" -->
+<!-- uses existing minutes remaining text -->
+<!-- firstplace, secondplace, thirdplace are all text said as part of the rank announcement, they are assembled in the order "In 1st place, " + name -->
+<!-- in, thplace is part of the assembly of the speech for 4th and lower places, it is assembled as "In" + number + "th place, " + name -->
+<!-- live rank annoucments are assembled like this, "currently" "in 1st place, " + name + "with" + number + "laps" + "followed by" etc. -->
+<!-- timedout is used if a racers lap time exceeds the time out period, the sentence is constructed as name + "timedout" -->
+
+<translation>
+	<language_name>German</language_name>
+	<seconds>sekunden</seconds>
+	<hours>stunden</hours>
+	<hour>stunde</hour>
+	<minutes>minuten</minutes>
+	<countdownone>eins</countdownone>
+	<countdowntwo>zwei</countdowntwo>
+	<countdownthree>drei</countdownthree>
+	<countdownfour>vier</countdownfour>
+	<countdownfive>fuenf</countdownfive>
+	<bestlap>'beste Runde</bestlap>
+	<fastestlap>schnellste Runde von</fastestlap>
+	<takesthelead>uebernimmt die fuehrung</takesthelead>
+	<timelimitreached>zeit limit erreicht,vervollstaendigen sie ihre letzten Runde</timelimitreached>
+	<finished>fertig</finished>
+	<racecomplete>rennen beendet!</racecomplete>
+	<secondsremaining>verbleibende sekunden</secondsremaining>
+	<minuteremaining>verbleibende minuten</minuteremaining>
+	<minutesremaining>verbleibende minuten</minutesremaining>
+	<hourremaining>1 Stunde verbleibend</hourremaining>
+	<hourandremaining>1 stunde und</hourandremaining>
+	<hoursremaining>verbleibende Stunden</hoursremaining>
+	<hoursandremaining>stunden und</hoursandremaining>
+	<firstplace>erster Platz,</firstplace>
+	<secondplace>zweiter Platz,</secondplace>
+	<thirdplace>dritter Platz,</thirdplace>
+	<in>in</in>
+	<thplace>ter platz,</thplace>
+	<currentlyin>derzeit</currentlyin>
+	<with>mit</with>
+	<laps>runden</laps>
+	<followedby>gefolgt von</followedby>
+	<timedout>zeitueberschreitung</timedout>
+	<laplimitreached>runden limit erreicht beenden sie ihre letzte Runde</laplimitreached>
+	<preparetorace>fertig machen!</preparetorace>
+	<onpacefor>auf Tempo</onpacefor>
+	<lapsremaining>verbleibende runden</lapsremaining>
+	<lastlap>letzte runde</lastlap>
+	<takes>uebernimmt</takes>
+	<first>erster</first>
+	<second>zweiter</second>
+	<third>dritter</third>
+	<place>platz</place>
+</translation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parts>
+    <chassis>MR-01</chassis>
+    <chassis>MR-015</chassis>
+    <chassis>MR-015i</chassis>
+    <chassis>MR-02</chassis>
+    <chassis>MR-02i</chassis>
+    <chassis>MR-03</chassis>
+    <chassis>MA-010</chassis>
+    <chassis>Firelap</chassis>
+    <chassis>F1</chassis>
+    <chassis>dNaNo</chassis>
+    <chassis>Monster</chassis>
+    <chassis>Overland</chassis>
+    <chassis>XMod Gen1</chassis>
+    <chassis>XMod Evo</chassis>
+    <chassis>Iwaver 01</chassis>
+    <chassis>Iwaver 02</chassis>
+    <chassis>Iwaver 02M</chassis>
+    <scale>1:43</scale>
+    <scale>1:32</scale>
+    <scale>1:28</scale>
+    <scale>1:18</scale>
+    <scale>1:12</scale>
+    <scale>1:10</scale>
+    <scale>1:8</scale>
+    <class>Stock</class>
+    <class>HFAY</class>
+    <class>Mod</class>
+    <class>Open</class>
+    <class>F1</class>
+    <motor>Kyosho stock</motor>
+    <motor>HFAY Spec</motor>
+    <motor>Firelap stock</motor>
+    <motor>Stock</motor>
+</Parts>

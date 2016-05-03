@@ -1,0 +1,72 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2.3. Hardware Settings</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot_9469"><link rel="home" href="index.html" title="Flip Side Racing Software"><link rel="up" href="ch02.html" title="Chapter 2. General Config Screen"><link rel="prev" href="ch02s02.html" title="2.2. GUI Settings"><link rel="next" href="ch02s04.html" title="2.4. General Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.3. Hardware Settings</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a> </td><th width="60%" align="center">Chapter 2. General Config Screen</th><td width="20%" align="right"> <a accesskey="n" href="ch02s04.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="HardwareSettings"></a>2.3. Hardware Settings</h2></div></div></div>
+      
+
+      <p>The Hardware Settings heading contains options for configuring any
+      external devices you are using with the software.</p>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp110992"></a>2.3.1. Hardware Type</h3></div></div></div>
+        
+
+        <p>You must set the correct Hardware Type for the application to
+        operate. If you set this to <a class="link" href="ch08s14.html" title="8.14. Keyboard">Keyboard</a>
+        then for each racer you must set the <a class="link" href="ch08s11.html" title="8.11. UID">UID</a> to
+        the key you are going to press to register a lap for them. For the
+        other <a class="link" href="ch08.html" title="Chapter 8. Hardware">hardware types</a> you must define
+        the correct COM port for the software to operate.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="Accuracy"></a>2.3.2. Accuracy</h3></div></div></div>
+        
+
+        <p>Accuracy is set to automatic by default. This setting defines
+        what level of accuracy the lap counter provides for lap times. It is
+        recommended to keep this on automatic as this will use the appropriate
+        accuracy for your defined hardware type but you can manually define
+        0.01 second or 0.001 second accuracy if needed.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="COMDeviceSelection"></a>2.3.3. COM Device Selection</h3></div></div></div>
+        
+
+        <p>If you have a <a class="link" href="ch08.html" title="Chapter 8. Hardware">hardware</a> lap
+        counter you must select the correct COM port here for the software to
+        operate. After selecting the correct COM port you must click the Save
+        Connection button for the settings to be saved and for communication
+        with the lap counter to be initialized. After saving this setting it
+        will automatically be used.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="SecondaryCOMDevice"></a>2.3.4. Secondary COM Device Selection</h3></div></div></div>
+        
+
+        <p>In the event that you have a second lap counter connected to the
+        computer you must define what COM port it uses using the Secondary COM
+        Device Selection setting. After selecting the correct COM port click
+        the Save Connection button to save the settings and initialize
+        communication. The secondary lap counter will only be used for
+        register laps, it does not work with the <a class="link" href="ch03.html" title="Chapter 3. Edit Racers Screen">Edit Racers</a> Screen. Only use this
+        setting if you have a second lap counter attached.</p>
+      </div>
+
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp120736"></a>2.3.5. Relay Board COM Device Selection</h3></div></div></div>
+        
+
+        <p>A <a class="link" href="ch08s13.html" title="8.13. Relay Board">DLPIOR4 Relay Board</a> can be
+        used to control Start/Stop lights. The application will control the
+        relay board, during the starting race countdown the relay board can
+        will have Relay 4 active until 2 seconds left in the countdown, at 2
+        seconds it will switch Relay 4 off and Relay 3 on, at 1 second it will
+        switch Relay 3 off and Relay 2 on and finally at the start of the race
+        it will switch Relay 2 off and Relay 1 on. When the race time limit or
+        lap limit is reached race Relay 1 will turn off and Relay 2 will turn
+        on. When everyone has finished their final laps or timed out Relay 2
+        will turn off and Relay 4 will turn on. You can connect lights to
+        these relays to have a start/stop light for races.</p>
+
+        <p>If you have <a class="link" href="ch08s13.html" title="8.13. Relay Board">this relay board</a>
+        attached to the computer use this setting to define what COM port it
+        is using. After selecting the correct COM port click the Save
+        Connection button to save the settings and initialize
+        communication.</p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch02.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch02s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">2.2. GUI Settings </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 2.4. General Settings</td></tr></table></div></body></html>

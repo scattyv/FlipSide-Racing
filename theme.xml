@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Theme>
+    <background>BG_Frame.jpg</background>
+    <empty>empty.jpg</empty>
+    <emptymask>emptymask.jpg</emptymask>
+    <mainlogo>FlipSideRacingLogo.jpg</mainlogo>
+    <mainlogomask>FlipSideRacingLogoMask.jpg</mainlogomask>
+    <S_PrepareToRace>S_PrepareToRace.wav</S_PrepareToRace>
+    <S_Countdown0>S_Countdown_0.wav</S_Countdown0>
+    <S_Countdown1>S_Countdown_1.wav</S_Countdown1>
+    <S_Countdown2>S_Countdown_2.wav</S_Countdown2>
+    <S_Countdown3>S_Countdown_3.wav</S_Countdown3>
+    <S_Countdown4>S_Countdown_4.wav</S_Countdown4>
+    <S_Countdown5>S_Countdown_5.wav</S_Countdown5>
+    <S_CarLapBeep>S_CarLapBeep.wav</S_CarLapBeep>
+    <S_EndTheRace>S_RaceComplete.wav</S_EndTheRace>
+    <S_TimeLimitReached>S_TimeLimitReached.wav</S_TimeLimitReached>
+    <S_LapLimitReached>S_LapLimitReached.wav</S_LapLimitReached>
+</Theme>
